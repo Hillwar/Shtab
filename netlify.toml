@@ -1,0 +1,3 @@
+[build]
+  publish = "/"
+  command = ""  # Leave empty since this is a static site 
