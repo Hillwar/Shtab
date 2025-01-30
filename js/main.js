@@ -1,17 +1,26 @@
+// Initialize AOS
+AOS.init({
+    duration: 1000,
+    once: true
+});
+
 // Gallery Images
 const galleryImages = [
-    { src: 'images/event1.jpg', alt: 'Winter Camp 2023' },
-    { src: 'images/event2.jpg', alt: 'Education Activity' },
-    { src: 'images/event3.jpg', alt: 'Senior Gathering' },
+    { src: 'images/event1.jpg', alt: 'Зимовка 2023' },
+    { src: 'images/event2.jpg', alt: 'Учёба актива' },
+    { src: 'images/event3.jpg', alt: 'Сбор старшеклассников' },
+    { src: 'images/event4.jpg', alt: 'Соловки' },
     // Add more images as needed
 ];
 
-// Load gallery images
+// Load gallery images with animation
 function loadGallery() {
     const gallery = document.querySelector('.gallery-grid');
-    galleryImages.forEach(image => {
+    galleryImages.forEach((image, index) => {
         const imgContainer = document.createElement('div');
         imgContainer.className = 'gallery-item';
+        imgContainer.setAttribute('data-aos', 'fade-up');
+        imgContainer.setAttribute('data-aos-delay', (index * 100).toString());
         
         const img = document.createElement('img');
         img.src = image.src;
@@ -21,19 +30,6 @@ function loadGallery() {
         gallery.appendChild(imgContainer);
     });
 }
-
-// Handle form submissions
-document.getElementById('eventRegistration').addEventListener('submit', function(e) {
-    e.preventDefault();
-    // Add your form submission logic here
-    alert('Thank you for registering! We will contact you soon.');
-});
-
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    // Add your form submission logic here
-    alert('Thank you for your message! We will get back to you shortly.');
-});
 
 // Initialize gallery when DOM is loaded
 document.addEventListener('DOMContentLoaded', loadGallery); 
