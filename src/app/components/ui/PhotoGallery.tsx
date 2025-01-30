@@ -49,7 +49,7 @@ export function PhotoGallery({ photos, className }: PhotoGalleryProps) {
         initial="hidden"
         animate="visible"
       >
-        {photos.map((photo, index) => (
+        {photos.map((photo) => (
           <motion.div
             key={photo.src}
             className="relative aspect-square overflow-hidden rounded-lg glass cursor-pointer group"

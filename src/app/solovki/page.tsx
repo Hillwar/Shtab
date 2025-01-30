@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { Layout } from '../components/layout/Layout'
 import { PageHeader } from '../components/ui/PageHeader'
 import { Card } from '../components/ui/Card'
+import Image from 'next/image';
 
 const expeditionHighlights = [
   {
@@ -69,7 +70,7 @@ export default function SolovkiPage() {
       {/* Hero section */}
       <section className="relative rounded-3xl overflow-hidden mb-24">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-purple-900/90" />
-        <img
+        <Image
           src="/images/solovki.jpg"
           alt="Соловецкие острова"
           className="w-full h-[60vh] object-cover mix-blend-overlay"

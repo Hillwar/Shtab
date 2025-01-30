@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import { usePathname } from 'next/navigation'
+import Image from 'next/image';
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -26,7 +27,7 @@ export function Header() {
             <div className="flex items-center justify-between h-20">
               {/* Logo */}
               <Link href="/" className="flex items-center space-x-3">
-                <img src="/images/agsh-logo.png" alt="АГШШ" className="w-10 h-10" />
+                <Image src="/images/agsh-logo.png" alt="АГШШ" className="w-10 h-10" />
                 <span className="font-semibold text-lg">АГШШ</span>
               </Link>
 

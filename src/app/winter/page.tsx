@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { Layout } from '../components/layout/Layout'
 import { PageHeader } from '../components/ui/PageHeader'
+import Image from 'next/image';
 
 export default function WinterPage() {
   return (
@@ -60,7 +61,7 @@ export default function WinterPage() {
             className="space-y-6"
           >
             <div className="glass-card p-6">
-              <img
+              <Image
                 src="/images/winter-camp.jpg"
                 alt="Зимовка АГШШ"
                 className="w-full h-64 object-cover rounded-lg mb-4"
