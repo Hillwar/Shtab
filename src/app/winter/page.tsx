@@ -64,6 +64,8 @@ export default function WinterPage() {
               <Image
                 src="/images/winter-camp.jpg"
                 alt="Зимовка АГШШ"
+                width={40} // Add the required width property (in pixels)
+                height={40} // Add the required height property (in pixels)
                 className="w-full h-64 object-cover rounded-lg mb-4"
               />
               <h3 className="text-xl font-bold mb-2">Атмосфера зимовки</h3>

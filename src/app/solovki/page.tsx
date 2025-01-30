@@ -73,6 +73,8 @@ export default function SolovkiPage() {
         <Image
           src="/images/solovki.jpg"
           alt="Соловецкие острова"
+          width={40} // Add the required width property (in pixels)
+          height={40} // Add the required height property (in pixels)
           className="w-full h-[60vh] object-cover mix-blend-overlay"
         />
         <div className="absolute inset-0 flex items-center justify-center text-center p-8">

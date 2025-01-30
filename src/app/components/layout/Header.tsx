@@ -27,7 +27,13 @@ export function Header() {
             <div className="flex items-center justify-between h-20">
               {/* Logo */}
               <Link href="/" className="flex items-center space-x-3">
-                <Image src="/images/agsh-logo.png" alt="АГШШ" className="w-10 h-10" />
+              <Image
+  src="/images/agsh-logo.png"
+  alt="АГШШ"
+  width={40} // Add the required width property (in pixels)
+  height={40} // Add the required height property (in pixels)
+  className="w-10 h-10" // Optional: Tailwind CSS classes for styling
+/>
                 <span className="font-semibold text-lg">АГШШ</span>
               </Link>
 
