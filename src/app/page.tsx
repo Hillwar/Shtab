@@ -4,40 +4,10 @@ import { motion } from 'framer-motion'
 import { Layout } from './components/layout/Layout'
 import { Card } from './components/ui/Card'
 import Link from 'next/link'
-import { getMainPage, urlFor } from '@/sanity/lib/client'
-import { useEffect, useState } from 'react'
 import Image from 'next/image'
-import { SanityImageSource } from '@sanity/image-url/lib/types/types'
-
-interface MainPageData {
-  hero: {
-    title: string
-    description: string
-    image: SanityImageSource
-    buttons?: {
-      text: string
-      link: string
-      isPrimary: boolean
-    }[]
-  }
-  directions: {
-    title: string
-    description: string
-    icon: string
-    link: string
-    order: number
-  }[]
-}
+import { MAIN_PAGE } from './lib/constants/content'
 
 export default function HomePage() {
-  const [pageData, setPageData] = useState<MainPageData | null>(null)
-
-  useEffect(() => {
-    getMainPage().then(setPageData)
-  }, [])
-
-  if (!pageData) return null
-
   return (
     <Layout>
       {/* Hero Section */}
@@ -60,9 +30,10 @@ export default function HomePage() {
               className="relative w-32 h-32 md:w-48 md:h-48 mx-auto"
             >
               <Image
-                src={urlFor(pageData.hero.image).url()}
+                src={MAIN_PAGE.hero.image.src}
                 alt="АГШШ"
-                fill
+                width={MAIN_PAGE.hero.image.width}
+                height={MAIN_PAGE.hero.image.height}
                 className="object-contain"
               />
             </motion.div>
@@ -74,7 +45,7 @@ export default function HomePage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
               >
-                <div className="heading-gradient">{pageData.hero.title}</div>
+                <div className="heading-gradient">{MAIN_PAGE.hero.title}</div>
               </motion.h1>
               
               <motion.p 
@@ -83,7 +54,7 @@ export default function HomePage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
               >
-                {pageData.hero.description}
+                {MAIN_PAGE.hero.description}
               </motion.p>
             </div>
 
@@ -93,7 +64,7 @@ export default function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
             >
-              {pageData.hero.buttons?.map((button) => (
+              {MAIN_PAGE.hero.buttons.map((button) => (
                 <Link 
                   key={button.link} 
                   href={button.link}
@@ -108,12 +79,12 @@ export default function HomePage() {
       </section>
 
       {/* Features Section */}
-      <section className="mb-24 pt-12">
+      <section className="container mx-auto mb-24 pt-12 px-4">
         <h2 className="text-3xl font-bold text-center mb-12">
           Наши направления
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {pageData.directions
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {MAIN_PAGE.directions
             .sort((a, b) => a.order - b.order)
             .map((direction, index) => (
               <motion.div
@@ -124,9 +95,9 @@ export default function HomePage() {
               >
                 <Link href={direction.link}>
                   <Card className="h-full hover:scale-105 transition-transform duration-300">
-                    <div className="p-6 text-center">
-                      <span className="text-4xl mb-4 block">{direction.icon}</span>
-                      <h3 className="text-xl font-semibold mb-2">{direction.title}</h3>
+                    <div className="p-8 text-center">
+                      <span className="text-5xl mb-6 block">{direction.icon}</span>
+                      <h3 className="text-2xl font-semibold mb-4">{direction.title}</h3>
                       <p className="text-white/70">{direction.description}</p>
                     </div>
                   </Card>
