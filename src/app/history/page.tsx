@@ -112,7 +112,7 @@ export default function HistoryPage() {
       <div className="container mx-auto px-4 py-12">
         <div className="relative max-w-4xl mx-auto">
           {/* Линия времени */}
-          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-white/10 transform -translate-x-1/2" />
+          <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-white/20 transform -translate-x-1/2" />
 
           <div className="space-y-16">
             {timelineData.map((decade) => (
@@ -128,7 +128,7 @@ export default function HistoryPage() {
                   onClick={() => setExpandedDecade(expandedDecade === decade.decade ? null : decade.decade)}
                 >
                   <div className="flex items-center justify-center mb-8">
-                    <div className="text-3xl font-bold bg-primary/20 text-primary-foreground rounded-full w-32 h-32 flex items-center justify-center backdrop-blur-sm">
+                    <div className="text-3xl font-bold bg-[rgb(15,23,42)] border-2 border-white/20 text-white rounded-full w-32 h-32 flex items-center justify-center shadow-lg">
                       {decade.decade}
                     </div>
                   </div>
@@ -151,7 +151,7 @@ export default function HistoryPage() {
                           transition={{ delay: index * 0.1 }}
                         >
                           <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 z-10">
-                            <div className="text-xl font-bold bg-secondary/20 text-secondary-foreground rounded-full w-20 h-20 flex items-center justify-center backdrop-blur-sm">
+                            <div className="text-xl font-bold bg-[rgb(15,23,42)] border-2 border-white/20 text-white rounded-full w-20 h-20 flex items-center justify-center shadow-lg">
                               {event.year}
                             </div>
                           </div>
