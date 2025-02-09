@@ -7,23 +7,25 @@
 import {defineConfig} from 'sanity'
 import {deskTool} from 'sanity/desk'
 import {visionTool} from '@sanity/vision'
-import { schemaTypes } from './src/sanity/schemas'
-import {structure} from './src/sanity/structure'
+import { schemaTypes } from './schemas'
 
 // Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works
-import {apiVersion, dataset, projectId} from './src/sanity/env'
+const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!
+const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || 'production'
+const apiVersion = process.env.NEXT_PUBLIC_SANITY_API_VERSION || '2024-03-13'
 
 export default defineConfig({
   name: 'default',
-  title: 'АГШШ',
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
+  title: 'Shtab',
+  basePath: '/studio',
+  projectId,
+  dataset,
+  apiVersion,
   plugins: [
-    deskTool({structure}),
+    deskTool(),
     visionTool(),
   ],
   schema: {
     types: schemaTypes,
   },
-  basePath: '/studio',
 })

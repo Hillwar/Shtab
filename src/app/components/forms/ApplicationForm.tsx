@@ -10,6 +10,15 @@ interface FormField {
   options?: { label: string; value: string }[]
 }
 
+interface FormData {
+  formType: string
+  name: string
+  email: string
+  phone?: string
+  message?: string
+  [key: string]: string | undefined
+}
+
 interface ApplicationFormProps {
   formType: string
   title: string
@@ -29,7 +38,11 @@ export function ApplicationForm({
 }: ApplicationFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
-  const [formData, setFormData] = useState<Record<string, string>>({})
+  const [formData, setFormData] = useState<FormData>({
+    formType: '',
+    name: '',
+    email: '',
+  })
 
   const defaultFields: FormField[] = [
     { name: 'name', label: 'Имя', type: 'text', required: true },
@@ -47,11 +60,15 @@ export function ApplicationForm({
 
     try {
       await submitForm({
-        formType,
-        ...formData
+        ...formData,
+        formType
       })
       setSubmitStatus('success')
-      setFormData({})
+      setFormData({
+        formType: '',
+        name: '',
+        email: '',
+      })
       onSuccess?.()
     } catch (error) {
       setSubmitStatus('error')
