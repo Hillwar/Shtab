@@ -1,4 +1,6 @@
-export default {
+import { Rule } from '@sanity/types'
+
+const programSchema = {
   name: 'program',
   title: 'Programs',
   type: 'document',
@@ -7,7 +9,7 @@ export default {
       name: 'title',
       title: 'Title',
       type: 'string',
-      validation: (Rule: any) => Rule.required()
+      validation: (rule: Rule) => rule.required()
     },
     {
       name: 'description',
@@ -16,4 +18,6 @@ export default {
       rows: 3
     }
   ]
-} 
+}
+
+export default programSchema 

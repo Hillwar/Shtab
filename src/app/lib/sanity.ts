@@ -1,7 +1,6 @@
 import { createClient } from 'next-sanity'
 import imageUrlBuilder from '@sanity/image-url'
 import { SanityImageSource } from '@sanity/image-url/lib/types/types'
-import { Rule } from '@sanity/types'
 
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || 'production'
@@ -42,7 +41,7 @@ interface FormData {
   email: string;
   phone?: string;
   message?: string;
-  [key: string]: any;
+  [key: string]: string | undefined;
 }
 
 // Form submission function

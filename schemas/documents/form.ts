@@ -1,4 +1,6 @@
-export default {
+import { Rule } from '@sanity/types'
+
+const formSchema = {
   name: 'form',
   title: 'Forms',
   type: 'document',
@@ -16,7 +18,7 @@ export default {
           { title: 'Контактная форма', value: 'contact' }
         ]
       },
-      validation: (Rule: any) => Rule.required()
+      validation: (rule: Rule) => rule.required()
     },
     {
       name: 'submittedAt',
@@ -115,4 +117,6 @@ export default {
       subtitle: 'formType'
     }
   }
-} 
+}
+
+export default formSchema 

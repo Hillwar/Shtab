@@ -1,4 +1,6 @@
-export default {
+import { Rule } from '@sanity/types'
+
+const pageSchema = {
   name: 'page',
   title: 'Pages',
   type: 'document',
@@ -7,7 +9,7 @@ export default {
       name: 'title',
       title: 'Title',
       type: 'string',
-      validation: (Rule: any) => Rule.required()
+      validation: (rule: Rule) => rule.required()
     },
     {
       name: 'slug',
@@ -17,7 +19,7 @@ export default {
         source: 'title',
         maxLength: 96
       },
-      validation: (Rule: any) => Rule.required()
+      validation: (rule: Rule) => rule.required()
     },
     {
       name: 'description',
@@ -63,4 +65,6 @@ export default {
       ]
     }
   ]
-} 
+}
+
+export default pageSchema 
