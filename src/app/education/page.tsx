@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { Layout } from '../components/layout/Layout'
 import { PageHeader } from '../components/ui/PageHeader'
 import { Card } from '../components/ui/Card'
+import { Gallery } from '../components/ui/Gallery'
 
 const educationPrograms = [
   {
@@ -32,6 +33,45 @@ const educationPrograms = [
       'Музыкальные занятия',
       'Прикладное творчество'
     ]
+  }
+]
+
+const galleryImages = [
+  {
+    src: '/images/education/1.jpg',
+    alt: 'Тренинг лидерства',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/education/2.jpg',
+    alt: 'Командная работа',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/education/3.jpg',
+    alt: 'Мастер-класс',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/education/4.jpg',
+    alt: 'Презентация проектов',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/education/5.jpg',
+    alt: 'Творческие занятия',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/education/6.jpg',
+    alt: 'Групповая дискуссия',
+    width: 1920,
+    height: 1080
   }
 ]
 
@@ -114,6 +154,17 @@ export default function EducationPage() {
               </div>
             </div>
           </Card>
+        </section>
+
+        {/* Gallery section */}
+        <section className="my-24">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Фотогалерея
+          </h2>
+          <Gallery 
+            images={galleryImages}
+            title="Моменты учебы актива"
+          />
         </section>
       </div>
     </Layout>

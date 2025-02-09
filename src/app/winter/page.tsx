@@ -4,6 +4,47 @@ import { motion } from 'framer-motion'
 import { Layout } from '../components/layout/Layout'
 import { PageHeader } from '../components/ui/PageHeader'
 import Image from 'next/image';
+import { Gallery } from '../components/ui/Gallery'
+
+// Добавляем массив с фотографиями после существующих импортов
+const galleryImages = [
+  {
+    src: '/images/winter/1.jpg',
+    alt: 'Зимние активности',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/winter/2.jpg',
+    alt: 'Командные игры',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/winter/3.jpg',
+    alt: 'Творческие мастерские',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/winter/4.jpg',
+    alt: 'Вечерние мероприятия',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/winter/5.jpg',
+    alt: 'Спортивные соревнования',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/winter/6.jpg',
+    alt: 'Общее фото участников',
+    width: 1920,
+    height: 1080
+  }
+]
 
 export default function WinterPage() {
   return (
@@ -87,6 +128,17 @@ export default function WinterPage() {
           </motion.div>
         </div>
       </div>
+
+      {/* Gallery section */}
+      <section className="container mx-auto px-4 py-12">
+        <h2 className="text-3xl font-bold text-center mb-12">
+          Фотогалерея
+        </h2>
+        <Gallery 
+          images={galleryImages}
+          title="Моменты зимовки"
+        />
+      </section>
     </Layout>
   )
 } 

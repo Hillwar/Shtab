@@ -5,6 +5,7 @@ import { Layout } from '../components/layout/Layout'
 import { PageHeader } from '../components/ui/PageHeader'
 import { Card } from '../components/ui/Card'
 import Image from 'next/image';
+import { Gallery } from '../components/ui/Gallery'
 
 const expeditionHighlights = [
   {
@@ -56,6 +57,46 @@ const expeditionDetails = [
       'Лабиринты и менгиры',
       'Морские прогулки вокруг островов'
     ]
+  }
+]
+
+// Добавляем массив с фотографиями после существующих констант
+const galleryImages = [
+  {
+    src: '/images/solovki/1.jpg',
+    alt: 'Соловецкий монастырь',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/solovki/2.jpg',
+    alt: 'Археологические раскопки',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/solovki/3.jpg',
+    alt: 'Природа Соловков',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/solovki/4.jpg',
+    alt: 'Морская прогулка',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/solovki/5.jpg',
+    alt: 'Исследовательская работа',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/solovki/6.jpg',
+    alt: 'Закат на Соловках',
+    width: 1920,
+    height: 1080
   }
 ]
 
@@ -201,6 +242,17 @@ export default function SolovkiPage() {
               />
             </div>
           </Card>
+        </section>
+
+        {/* Gallery section */}
+        <section className="my-24">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Фотогалерея
+          </h2>
+          <Gallery 
+            images={galleryImages}
+            title="Экспедиция на Соловки"
+          />
         </section>
       </div>
     </Layout>
