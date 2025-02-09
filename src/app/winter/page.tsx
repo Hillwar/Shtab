@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { Layout } from '../components/layout/Layout'
 import { PageHeader } from '../components/ui/PageHeader'
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function WinterPage() {
   return (
@@ -86,23 +87,6 @@ export default function WinterPage() {
             </div>
           </motion.div>
         </div>
-
-        {/* Призыв к действию */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-12 text-center"
-        >
-          <div className="glass-card p-8 max-w-2xl mx-auto">
-            <h2 className="text-2xl font-bold mb-4">Присоединяйтесь к нам!</h2>
-            <p className="text-white/80 mb-6">
-              Зимовка АГШШ - это возможность провести время с пользой, найти новых друзей
-              и получить незабываемые впечатления.
-            </p>
-            <button className="button-primary">Подать заявку</button>
-          </div>
-        </motion.div>
       </div>
     </Layout>
   )

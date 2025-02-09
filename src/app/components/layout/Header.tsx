@@ -16,6 +16,7 @@ export function Header() {
     { href: '/activity', label: 'Учеба актива' },
     { href: '/meetings', label: 'Сборы' },
     { href: '/winter', label: 'Зимовка' },
+    { href: '/solovki', label: 'Соловки' },
     { href: '/contacts', label: 'Контакты' },
   ]
 

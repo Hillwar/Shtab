@@ -1,106 +1,20 @@
 'use client'
 
 import { motion, AnimatePresence } from 'framer-motion'
+import { useState, useEffect } from 'react'
 import { Layout } from '../components/layout/Layout'
 import { PageHeader } from '../components/ui/PageHeader'
-import { useState } from 'react'
-
-interface TimelineEvent {
-  id: string
-  year: string
-  date?: string
-  title: string
-  description: string
-}
-
-interface TimelineDecade {
-  decade: string
-  events: TimelineEvent[]
-}
-
-const timelineData: TimelineDecade[] = [
-  {
-    decade: '1960-е',
-    events: [
-      {
-        id: '1961-1',
-        year: '1961',
-        date: '8 октября',
-        title: 'Основание АГШШ',
-        description: 'Во Дворце пионеров состоялось первое заседание городского пионерского штаба. На нем присутствовало 9 пионеров из 8 школ города, которых собрали здесь заведующая отделом учащейся молодежи горкома ВЛКСМ Н. В. Батыгина и инженер В. А. Сотрудинов — первый руководитель штаба.'
-      },
-      {
-        id: '1961-2',
-        year: '1961',
-        date: '22 октября',
-        title: 'Формирование структуры',
-        description: 'На заседании штаба была определена структура штаба и избраны начальник штаба В. Василенко и комиссар штаба Т. Будник.'
-      },
-      {
-        id: '1962',
-        year: '1962',
-        date: '19 мая',
-        title: 'Первая пионерская маевка',
-        description: 'Городской штаб школьников проводит первую пионерскую маевку отрядов «Спутников семилетки» в д. Соломаты Архангельской области.'
-      },
-      {
-        id: '1964-1',
-        year: '1964',
-        date: '3-8 января',
-        title: 'Начало коммунарского движения',
-        description: 'Делегация членов штаба побывала на 5 коммунарском сборе — «Зимовке» во Фрунзенской коммуне города Ленинграда.'
-      },
-      {
-        id: '1965',
-        year: '1965',
-        date: '8 октября',
-        title: 'Присвоение имени А.П. Гайдара',
-        description: 'Городскому штабу школьников присвоено имя писателя Аркадия Петровича Гайдара.'
-      },
-      {
-        id: '1969',
-        year: '1969',
-        date: '3 ноября',
-        title: 'Вручение знамени',
-        description: 'За активную работу штабу было вручено знамя горкома комсомола, которое является знаменем АГШШ и по сей день.'
-      }
-    ]
-  },
-  {
-    decade: '1980-е',
-    events: [
-      {
-        id: '1981',
-        year: '1981',
-        date: 'Октябрь',
-        title: '20-летие штаба',
-        description: 'Штабу исполнилось 20 лет. У штабистов появился свой значок, который стал одной из наград члена штаба.'
-      }
-    ]
-  },
-  {
-    decade: '1990-е',
-    events: [
-      {
-        id: '1990',
-        year: '1990',
-        date: '8 октября',
-        title: 'Новый статус',
-        description: 'АГШШ был юридически оформлен в Общественную организацию «Архангельский городской штаб школьников им. А. П. Гайдара».'
-      },
-      {
-        id: '1995',
-        year: '1995',
-        title: 'Переименование сборов',
-        description: 'После первой половины 37 сбора было принято решение переименовать Коммунарский сбор в Сбор Старшеклассников.'
-      }
-    ]
-  }
-]
+import { getHistory, urlFor } from '@/sanity/lib/client'
+import Image from 'next/image'
 
 export default function HistoryPage() {
   const [expandedDecade, setExpandedDecade] = useState<string | null>(null)
-  const [expandedEvent, setExpandedEvent] = useState<string | null>(null)
+  const [timelineData, setTimelineData] = useState<any[]>([])
+
+  // Fetch data on mount
+  useEffect(() => {
+    getHistory().then(setTimelineData)
+  }, [])
 
   return (
     <Layout>
@@ -109,30 +23,26 @@ export default function HistoryPage() {
         description="Более 60 лет развития, обучения и дружбы"
       />
 
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-8">
         <div className="relative max-w-4xl mx-auto">
           {/* Линия времени */}
           <div className="absolute left-1/2 top-0 bottom-0 w-px bg-white/10 transform -translate-x-1/2" />
 
-          <div className="space-y-16">
-            {timelineData.map((decade) => (
+          <div className="space-y-8">
+            {timelineData.map((decade: any) => (
               <motion.div
-                key={decade.decade}
+                key={decade._id}
                 className="relative"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
               >
                 {/* Десятилетие */}
-                <motion.button
-                  className="relative z-10 w-full text-left"
+                <button
                   onClick={() => setExpandedDecade(expandedDecade === decade.decade ? null : decade.decade)}
+                  className="relative z-10 flex items-center justify-center w-20 h-20 mx-auto mb-4 rounded-full bg-[rgb(15,23,42)] border border-white/10 hover:scale-110 transition-transform duration-300"
                 >
-                  <div className="flex items-center justify-center mb-8">
-                    <div className="text-3xl font-bold bg-primary/20 text-primary-foreground rounded-full w-32 h-32 flex items-center justify-center backdrop-blur-sm">
-                      {decade.decade}
-                    </div>
-                  </div>
-                </motion.button>
+                  <span className="text-2xl font-bold text-gradient">{decade.decade}</span>
+                </button>
 
                 <AnimatePresence>
                   {expandedDecade === decade.decade && (
@@ -140,71 +50,55 @@ export default function HistoryPage() {
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
-                      className="space-y-12 overflow-hidden"
+                      className="space-y-8 overflow-visible"
                     >
-                      {decade.events.map((event, index) => (
+                      {decade.events.map((event: any, index: number) => (
                         <motion.div
-                          key={event.id}
+                          key={event._key}
                           className="relative"
                           initial={{ opacity: 0, y: 20 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: index * 0.1 }}
                         >
                           <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
-                            <div className="text-xl font-bold bg-secondary/20 text-secondary-foreground rounded-full w-20 h-20 flex items-center justify-center backdrop-blur-sm">
+                            <div className="text-xl font-bold bg-secondary/20 text-secondary-foreground rounded-full w-16 h-16 flex items-center justify-center backdrop-blur-sm">
                               {event.year}
                             </div>
                           </div>
-                          <div className="grid grid-cols-2 gap-32">
+                          <div className="grid grid-cols-2 gap-16">
                             {index % 2 === 0 ? (
                               <>
-                                <motion.button
-                                  className="glass-card p-6 cursor-pointer hover:scale-[1.02] transition-transform"
-                                  onClick={() => setExpandedEvent(expandedEvent === event.id ? null : event.id)}
-                                >
-                                  {event.date && (
-                                    <p className="text-sm text-white/60 mb-6 text-center border-b border-white/10 pb-4">{event.date}</p>
+                                <div className="text-right">
+                                  <h3 className="text-xl font-bold mb-2">{event.title}</h3>
+                                  <p className="text-white/70">{event.description}</p>
+                                </div>
+                                <div className="relative aspect-video">
+                                  {event.image && (
+                                    <Image
+                                      src={urlFor(event.image).url()}
+                                      alt={event.title}
+                                      fill
+                                      className="object-cover rounded-lg"
+                                    />
                                   )}
-                                  <h3 className="text-xl font-bold mb-2 text-gradient">{event.title}</h3>
-                                  <AnimatePresence>
-                                    {expandedEvent === event.id && (
-                                      <motion.p
-                                        initial={{ opacity: 0, height: 0 }}
-                                        animate={{ opacity: 1, height: 'auto' }}
-                                        exit={{ opacity: 0, height: 0 }}
-                                        className="text-white/80"
-                                      >
-                                        {event.description}
-                                      </motion.p>
-                                    )}
-                                  </AnimatePresence>
-                                </motion.button>
-                                <div />
+                                </div>
                               </>
                             ) : (
                               <>
-                                <div />
-                                <motion.button
-                                  className="glass-card p-6 cursor-pointer hover:scale-[1.02] transition-transform"
-                                  onClick={() => setExpandedEvent(expandedEvent === event.id ? null : event.id)}
-                                >
-                                  {event.date && (
-                                    <p className="text-sm text-white/60 mb-6 text-center border-b border-white/10 pb-4">{event.date}</p>
+                                <div className="relative aspect-video">
+                                  {event.image && (
+                                    <Image
+                                      src={urlFor(event.image).url()}
+                                      alt={event.title}
+                                      fill
+                                      className="object-cover rounded-lg"
+                                    />
                                   )}
-                                  <h3 className="text-xl font-bold mb-2 text-gradient">{event.title}</h3>
-                                  <AnimatePresence>
-                                    {expandedEvent === event.id && (
-                                      <motion.p
-                                        initial={{ opacity: 0, height: 0 }}
-                                        animate={{ opacity: 1, height: 'auto' }}
-                                        exit={{ opacity: 0, height: 0 }}
-                                        className="text-white/80"
-                                      >
-                                        {event.description}
-                                      </motion.p>
-                                    )}
-                                  </AnimatePresence>
-                                </motion.button>
+                                </div>
+                                <div>
+                                  <h3 className="text-xl font-bold mb-2">{event.title}</h3>
+                                  <p className="text-white/70">{event.description}</p>
+                                </div>
                               </>
                             )}
                           </div>

@@ -20,13 +20,17 @@ export function Footer() {
             <h3 className="text-lg font-semibold mb-4">Социальные сети</h3>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://vk.com/shtab_29"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-white/70 hover:text-white transition-colors"
               >
                 VK
               </a>
               <a
-                href="#"
+                href="https://web.telegram.org/k/#@MikhKir"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-white/70 hover:text-white transition-colors"
               >
                 Telegram

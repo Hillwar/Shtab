@@ -5,6 +5,7 @@ import { Layout } from '../components/layout/Layout'
 import { PageHeader } from '../components/ui/PageHeader'
 import { Card } from '../components/ui/Card'
 import Image from 'next/image';
+import Link from 'next/link';
 
 const campFeatures = [
   {
@@ -173,35 +174,6 @@ export default function SeniorPage() {
             </motion.div>
           ))}
         </div>
-      </section>
-
-      {/* Registration section */}
-      <section className="text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="max-w-3xl mx-auto"
-        >
-          <Card className="p-8">
-            <h2 className="text-3xl font-bold mb-6">
-              Стань участником сбора
-            </h2>
-            <p className="text-white/70 mb-8">
-              Регистрация на 64-й Сбор старшеклассников откроется в апреле 2024 года. Оставьте свои контакты, и мы сообщим вам о начале регистрации первыми!
-            </p>
-            <form className="max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Ваш email"
-                className="w-full px-4 py-3 rounded-full bg-white/5 border border-white/10 text-white mb-4 focus:outline-none focus:border-blue-500"
-              />
-              <button className="w-full px-8 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-full font-medium transition-colors">
-                Подписаться на обновления
-              </button>
-            </form>
-          </Card>
-        </motion.div>
       </section>
     </Layout>
   )

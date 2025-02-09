@@ -95,23 +95,6 @@ export default function ActivityPage() {
             </div>
           </motion.div>
         </div>
-
-        {/* Призыв к действию */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-12 text-center"
-        >
-          <div className="glass-card p-8 max-w-2xl mx-auto">
-            <h2 className="text-2xl font-bold mb-4">Начните свой путь к успеху!</h2>
-            <p className="text-white/80 mb-6">
-              Присоединяйтесь к нашей программе обучения и станьте частью команды
-              активных и целеустремленных лидеров.
-            </p>
-            <button className="button-primary">Записаться на программу</button>
-          </div>
-        </motion.div>
       </div>
     </Layout>
   )
