@@ -1,4 +1,4 @@
-import { type StructureBuilder, type DefaultDocumentNodeResolver } from 'sanity/desk'
+import { type StructureBuilder } from 'sanity/desk'
 
 // https://www.sanity.io/docs/structure-builder-cheat-sheet
 export const structure = (S: StructureBuilder) =>

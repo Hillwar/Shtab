@@ -6,13 +6,14 @@ import { Layout } from '../components/layout/Layout'
 import { PageHeader } from '../components/ui/PageHeader'
 import { getHistory, urlFor } from '@/sanity/lib/client'
 import Image from 'next/image'
+import { SanityImageSource } from '@sanity/image-url/lib/types/types'
 
 interface Event {
   _key: string;
   year: number;
   title: string;
   description: string;
-  image: any; // Sanity image type
+  image: SanityImageSource;
 }
 
 interface Decade {

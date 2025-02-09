@@ -7,12 +7,13 @@ import Link from 'next/link'
 import { getMainPage, urlFor } from '@/sanity/lib/client'
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
+import { SanityImageSource } from '@sanity/image-url/lib/types/types'
 
 interface MainPageData {
   hero: {
     title: string
     description: string
-    image: any
+    image: SanityImageSource
     buttons?: {
       text: string
       link: string

@@ -1,16 +1,16 @@
-export default {
+const activitiesSchema = {
   name: 'activities',
-  title: 'Учеба актива',
+  title: 'Activities',
   type: 'document',
   fields: [
     {
       name: 'title',
-      title: 'Заголовок',
+      title: 'Title',
       type: 'string'
     },
     {
       name: 'description',
-      title: 'Описание',
+      title: 'Description',
       type: 'text'
     },
     {
@@ -68,4 +68,6 @@ export default {
       ]
     }
   ]
-} 
+}
+
+export default activitiesSchema 
