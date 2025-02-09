@@ -140,7 +140,7 @@ export default function HistoryPage() {
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
-                      className="space-y-12 overflow-hidden"
+                      className="space-y-12"
                     >
                       {decade.events.map((event, index) => (
                         <motion.div
@@ -150,7 +150,7 @@ export default function HistoryPage() {
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: index * 0.1 }}
                         >
-                          <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
+                          <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 z-10">
                             <div className="text-xl font-bold bg-secondary/20 text-secondary-foreground rounded-full w-20 h-20 flex items-center justify-center backdrop-blur-sm">
                               {event.year}
                             </div>
@@ -159,7 +159,7 @@ export default function HistoryPage() {
                             {index % 2 === 0 ? (
                               <>
                                 <motion.button
-                                  className="glass-card p-6 cursor-pointer hover:scale-[1.02] transition-transform"
+                                  className="glass-card p-6 cursor-pointer hover:scale-[1.02] transition-transform relative z-20"
                                   onClick={() => setExpandedEvent(expandedEvent === event.id ? null : event.id)}
                                 >
                                   {event.date && (
@@ -185,7 +185,7 @@ export default function HistoryPage() {
                               <>
                                 <div />
                                 <motion.button
-                                  className="glass-card p-6 cursor-pointer hover:scale-[1.02] transition-transform"
+                                  className="glass-card p-6 cursor-pointer hover:scale-[1.02] transition-transform relative z-20"
                                   onClick={() => setExpandedEvent(expandedEvent === event.id ? null : event.id)}
                                 >
                                   {event.date && (
