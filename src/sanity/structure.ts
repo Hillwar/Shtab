@@ -12,9 +12,6 @@ export const structure = (S: StructureBuilder) =>
             .title('Настройки')
             .items([
               S.listItem()
-                .title('Навигация')
-                .child(S.document().schemaType('navigation').documentId('navigation')),
-              S.listItem()
                 .title('Главная страница')
                 .child(S.document().schemaType('mainPage').documentId('mainPage'))
             ])

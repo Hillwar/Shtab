@@ -4,7 +4,8 @@ import { motion } from 'framer-motion'
 import { Layout } from '../components/layout/Layout'
 import { PageHeader } from '../components/ui/PageHeader'
 import { Card } from '../components/ui/Card'
-import Image from 'next/image';
+import Image from 'next/image'
+import { IMAGES } from '../lib/constants/content'
 
 const campFeatures = [
   {
@@ -84,8 +85,10 @@ export default function SeniorPage() {
       <section className="relative rounded-3xl overflow-hidden mb-24">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-purple-900/90" />
         <Image
-          src="/images/senior-camp.jpg"
+          src={IMAGES.seniorCamp.src}
           alt="Сбор старшеклассников"
+          width={IMAGES.seniorCamp.width}
+          height={IMAGES.seniorCamp.height}
           className="w-full h-[60vh] object-cover mix-blend-overlay"
         />
         <div className="absolute inset-0 flex items-center justify-center text-center p-8">

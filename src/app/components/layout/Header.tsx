@@ -4,21 +4,18 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import { usePathname } from 'next/navigation'
-import Image from 'next/image';
+import Image from 'next/image'
 
-export function Header() {
+interface HeaderProps {
+  navigation: {
+    title: string
+    path: string
+  }[]
+}
+
+export function Header({ navigation }: HeaderProps) {
   const [isOpen, setIsOpen] = useState(false)
   const pathname = usePathname()
-
-  const menuItems = [
-    { href: '/', label: 'Главная' },
-    { href: '/history', label: 'История' },
-    { href: '/activity', label: 'Учеба актива' },
-    { href: '/meetings', label: 'Сборы' },
-    { href: '/winter', label: 'Зимовка' },
-    { href: '/solovki', label: 'Соловки' },
-    { href: '/contacts', label: 'Контакты' },
-  ]
 
   return (
     <>
@@ -28,25 +25,25 @@ export function Header() {
             <div className="flex items-center justify-between h-20">
               {/* Logo */}
               <Link href="/" className="flex items-center space-x-3">
-              <Image
-  src="/images/agsh-logo.png"
-  alt="АГШШ"
-  width={40} // Add the required width property (in pixels)
-  height={40} // Add the required height property (in pixels)
-  className="w-10 h-10" // Optional: Tailwind CSS classes for styling
-/>
+                <Image
+                  src="/images/agsh-logo.png"
+                  alt="АГШШ"
+                  width={40}
+                  height={40}
+                  className="w-10 h-10"
+                />
                 <span className="font-semibold text-lg">АГШШ</span>
               </Link>
 
               {/* Desktop Navigation */}
               <div className="hidden md:flex space-x-2">
-                {menuItems.map((item) => (
+                {navigation.map((item) => (
                   <Link
-                    key={item.href}
-                    href={item.href}
-                    className={`nav-link ${pathname === item.href ? 'nav-link-active' : ''}`}
+                    key={item.path}
+                    href={item.path}
+                    className={`nav-link ${pathname === item.path ? 'nav-link-active' : ''}`}
                   >
-                    {item.label}
+                    {item.title}
                   </Link>
                 ))}
               </div>
@@ -89,14 +86,14 @@ export function Header() {
               >
                 <div className="container mx-auto px-4 py-4">
                   <div className="flex flex-col space-y-2">
-                    {menuItems.map((item) => (
+                    {navigation.map((item) => (
                       <Link
-                        key={item.href}
-                        href={item.href}
-                        className={`nav-link ${pathname === item.href ? 'nav-link-active' : ''}`}
+                        key={item.path}
+                        href={item.path}
+                        className={`nav-link ${pathname === item.path ? 'nav-link-active' : ''}`}
                         onClick={() => setIsOpen(false)}
                       >
-                        {item.label}
+                        {item.title}
                       </Link>
                     ))}
                   </div>

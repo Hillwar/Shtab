@@ -182,32 +182,3 @@ export const getSolovki = cache(async () => {
     }
   )
 })
-
-export const getNavigation = cache(async () => {
-  return client.fetch(
-    `*[_type == "navigation"][0] {
-      header[] {
-        title,
-        link,
-        order
-      },
-      footer {
-        description,
-        socialLinks[] {
-          platform,
-          url,
-          icon
-        },
-        address,
-        phone,
-        email
-      }
-    }`,
-    {},
-    {
-      next: {
-        tags: ['navigation']
-      }
-    }
-  )
-})
