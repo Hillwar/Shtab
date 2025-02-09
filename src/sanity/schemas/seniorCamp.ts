@@ -1,21 +1,21 @@
-export default {
+const seniorCampSchema = {
   name: 'seniorCamp',
-  title: 'Сбор старшеклассников',
+  title: 'Senior Camp',
   type: 'document',
   fields: [
     {
       name: 'title',
-      title: 'Заголовок',
+      title: 'Title',
       type: 'string'
     },
     {
       name: 'description',
-      title: 'Описание',
+      title: 'Description',
       type: 'text'
     },
     {
       name: 'features',
-      title: 'Особенности сбора',
+      title: 'Features',
       type: 'array',
       of: [
         {
@@ -23,17 +23,17 @@ export default {
           fields: [
             {
               name: 'title',
-              title: 'Название',
+              title: 'Title',
               type: 'string'
             },
             {
               name: 'description',
-              title: 'Описание',
+              title: 'Description',
               type: 'text'
             },
             {
               name: 'icon',
-              title: 'Иконка (эмодзи)',
+              title: 'Icon',
               type: 'string'
             }
           ]
@@ -42,7 +42,7 @@ export default {
     },
     {
       name: 'schedule',
-      title: 'Программа сбора',
+      title: 'Schedule',
       type: 'array',
       of: [
         {
@@ -50,23 +50,24 @@ export default {
           fields: [
             {
               name: 'day',
-              title: 'День',
+              title: 'Day',
               type: 'string'
             },
             {
               name: 'title',
-              title: 'Название',
+              title: 'Title',
               type: 'string'
             },
             {
               name: 'activities',
-              title: 'Активности',
-              type: 'array',
-              of: [{ type: 'string' }]
+              title: 'Activities',
+              type: 'text'
             }
           ]
         }
       ]
     }
   ]
-} 
+}
+
+export default seniorCampSchema 

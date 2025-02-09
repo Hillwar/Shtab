@@ -1,21 +1,21 @@
-export default {
+const solovkiSchema = {
   name: 'solovki',
-  title: 'Соловки',
+  title: 'Solovki',
   type: 'document',
   fields: [
     {
       name: 'title',
-      title: 'Заголовок',
+      title: 'Title',
       type: 'string'
     },
     {
       name: 'description',
-      title: 'Описание',
+      title: 'Description',
       type: 'text'
     },
     {
       name: 'program',
-      title: 'Программа',
+      title: 'Program',
       type: 'array',
       of: [
         {
@@ -23,12 +23,12 @@ export default {
           fields: [
             {
               name: 'title',
-              title: 'Название',
+              title: 'Title',
               type: 'string'
             },
             {
               name: 'description',
-              title: 'Описание',
+              title: 'Description',
               type: 'text'
             }
           ]
@@ -37,25 +37,27 @@ export default {
     },
     {
       name: 'location',
-      title: 'Расположение на карте',
+      title: 'Location',
       type: 'object',
       fields: [
         {
           name: 'lat',
-          title: 'Широта',
+          title: 'Latitude',
           type: 'number'
         },
         {
           name: 'lng',
-          title: 'Долгота',
+          title: 'Longitude',
           type: 'number'
         },
         {
           name: 'zoom',
-          title: 'Масштаб',
+          title: 'Zoom Level',
           type: 'number'
         }
       ]
     }
   ]
-} 
+}
+
+export default solovkiSchema 

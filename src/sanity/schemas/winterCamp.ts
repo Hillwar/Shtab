@@ -1,21 +1,21 @@
-export default {
+const winterCampSchema = {
   name: 'winterCamp',
-  title: 'Зимовка',
+  title: 'Winter Camp',
   type: 'document',
   fields: [
     {
       name: 'title',
-      title: 'Заголовок',
+      title: 'Title',
       type: 'string'
     },
     {
       name: 'description',
-      title: 'Описание',
+      title: 'Description',
       type: 'text'
     },
     {
       name: 'program',
-      title: 'Программа',
+      title: 'Program',
       type: 'array',
       of: [
         {
@@ -23,18 +23,18 @@ export default {
           fields: [
             {
               name: 'title',
-              title: 'Название',
+              title: 'Title',
+              type: 'string'
+            },
+            {
+              name: 'icon',
+              title: 'Icon',
               type: 'string'
             },
             {
               name: 'description',
-              title: 'Описание',
+              title: 'Description',
               type: 'text'
-            },
-            {
-              name: 'icon',
-              title: 'Иконка (эмодзи)',
-              type: 'string'
             }
           ]
         }
@@ -42,13 +42,24 @@ export default {
     },
     {
       name: 'requirements',
-      title: 'Что взять с собой',
+      title: 'Requirements',
       type: 'array',
-      of: [{ type: 'string' }]
+      of: [
+        {
+          type: 'object',
+          fields: [
+            {
+              name: 'item',
+              title: 'Item',
+              type: 'string'
+            }
+          ]
+        }
+      ]
     },
     {
       name: 'images',
-      title: 'Фотографии',
+      title: 'Images',
       type: 'array',
       of: [
         {
@@ -56,7 +67,7 @@ export default {
           fields: [
             {
               name: 'image',
-              title: 'Изображение',
+              title: 'Image',
               type: 'image',
               options: {
                 hotspot: true
@@ -64,7 +75,7 @@ export default {
             },
             {
               name: 'caption',
-              title: 'Подпись',
+              title: 'Caption',
               type: 'string'
             }
           ]
@@ -72,4 +83,6 @@ export default {
       ]
     }
   ]
-} 
+}
+
+export default winterCampSchema 

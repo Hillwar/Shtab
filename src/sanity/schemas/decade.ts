@@ -1,6 +1,6 @@
-export default {
+const decadeSchema = {
   name: 'decade',
-  title: 'Десятилетие',
+  title: 'Decade',
   type: 'document',
   fields: [
     {
@@ -51,4 +51,6 @@ export default {
       ]
     }
   ]
-} 
+}
+
+export default decadeSchema 

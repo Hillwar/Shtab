@@ -1,11 +1,11 @@
-export default {
+const navigationSchema = {
   name: 'navigation',
-  title: 'Навигация',
+  title: 'Navigation',
   type: 'document',
   fields: [
     {
       name: 'header',
-      title: 'Верхнее меню',
+      title: 'Header Navigation',
       type: 'array',
       of: [
         {
@@ -13,17 +13,17 @@ export default {
           fields: [
             {
               name: 'title',
-              title: 'Название',
+              title: 'Title',
               type: 'string'
             },
             {
               name: 'link',
-              title: 'Ссылка',
+              title: 'Link',
               type: 'string'
             },
             {
               name: 'order',
-              title: 'Порядок',
+              title: 'Order',
               type: 'number'
             }
           ]
@@ -32,17 +32,17 @@ export default {
     },
     {
       name: 'footer',
-      title: 'Подвал',
+      title: 'Footer',
       type: 'object',
       fields: [
         {
           name: 'description',
-          title: 'Описание',
+          title: 'Description',
           type: 'text'
         },
         {
           name: 'socialLinks',
-          title: 'Социальные сети',
+          title: 'Social Links',
           type: 'array',
           of: [
             {
@@ -50,17 +50,17 @@ export default {
               fields: [
                 {
                   name: 'platform',
-                  title: 'Платформа',
+                  title: 'Platform',
                   type: 'string'
                 },
                 {
                   name: 'url',
-                  title: 'Ссылка',
+                  title: 'URL',
                   type: 'string'
                 },
                 {
                   name: 'icon',
-                  title: 'Иконка',
+                  title: 'Icon',
                   type: 'string'
                 }
               ]
@@ -69,12 +69,12 @@ export default {
         },
         {
           name: 'address',
-          title: 'Адрес',
-          type: 'text'
+          title: 'Address',
+          type: 'string'
         },
         {
           name: 'phone',
-          title: 'Телефон',
+          title: 'Phone',
           type: 'string'
         },
         {
@@ -85,4 +85,6 @@ export default {
       ]
     }
   ]
-} 
+}
+
+export default navigationSchema 

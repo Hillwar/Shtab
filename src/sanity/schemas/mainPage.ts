@@ -1,21 +1,21 @@
-export default {
+const mainPageSchema = {
   name: 'mainPage',
-  title: 'Главная страница',
+  title: 'Main Page',
   type: 'document',
   fields: [
     {
       name: 'hero',
-      title: 'Главный баннер',
+      title: 'Hero Section',
       type: 'object',
       fields: [
         {
           name: 'title',
-          title: 'Заголовок',
+          title: 'Title',
           type: 'string'
         },
         {
           name: 'description',
-          title: 'Описание',
+          title: 'Description',
           type: 'text'
         },
         {
@@ -75,7 +75,7 @@ export default {
             },
             {
               name: 'icon',
-              title: 'Иконка (эмодзи)',
+              title: 'Иконка',
               type: 'string'
             },
             {
@@ -115,4 +115,6 @@ export default {
       ]
     }
   ]
-} 
+}
+
+export default mainPageSchema 
