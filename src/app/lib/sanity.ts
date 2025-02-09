@@ -1,5 +1,6 @@
 import { createClient } from 'next-sanity'
 import imageUrlBuilder from '@sanity/image-url'
+import { SanityImageSource } from '@sanity/image-url/lib/types/types'
 
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || 'production'
@@ -14,7 +15,7 @@ export const client = createClient({
 
 const builder = imageUrlBuilder(client)
 
-export function urlFor(source: any) {
+export function urlFor(source: SanityImageSource) {
   return builder.image(source)
 }
 
@@ -34,8 +35,17 @@ export async function getEvents(type?: string) {
   return client.fetch(filter, { type })
 }
 
+interface FormData {
+  formType: string;
+  name: string;
+  email: string;
+  phone?: string;
+  message?: string;
+  [key: string]: any;
+}
+
 // Form submission function
-export async function submitForm(formData: any) {
+export async function submitForm(formData: FormData) {
   const doc = {
     _type: 'form',
     formType: formData.formType,

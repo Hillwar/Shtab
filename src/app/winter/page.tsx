@@ -4,7 +4,6 @@ import { motion } from 'framer-motion'
 import { Layout } from '../components/layout/Layout'
 import { PageHeader } from '../components/ui/PageHeader'
 import Image from 'next/image';
-import Link from 'next/link';
 
 export default function WinterPage() {
   return (

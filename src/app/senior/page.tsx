@@ -5,7 +5,6 @@ import { Layout } from '../components/layout/Layout'
 import { PageHeader } from '../components/ui/PageHeader'
 import { Card } from '../components/ui/Card'
 import Image from 'next/image';
-import Link from 'next/link';
 
 const campFeatures = [
   {

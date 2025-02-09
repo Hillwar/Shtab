@@ -7,9 +7,23 @@ import { PageHeader } from '../components/ui/PageHeader'
 import { getHistory, urlFor } from '@/sanity/lib/client'
 import Image from 'next/image'
 
+interface Event {
+  _key: string;
+  year: number;
+  title: string;
+  description: string;
+  image: any; // Sanity image type
+}
+
+interface Decade {
+  _id: string;
+  decade: string;
+  events: Event[];
+}
+
 export default function HistoryPage() {
   const [expandedDecade, setExpandedDecade] = useState<string | null>(null)
-  const [timelineData, setTimelineData] = useState<any[]>([])
+  const [timelineData, setTimelineData] = useState<Decade[]>([])
 
   // Fetch data on mount
   useEffect(() => {
@@ -29,7 +43,7 @@ export default function HistoryPage() {
           <div className="absolute left-1/2 top-0 bottom-0 w-px bg-white/10 transform -translate-x-1/2" />
 
           <div className="space-y-8">
-            {timelineData.map((decade: any) => (
+            {timelineData.map((decade: Decade) => (
               <motion.div
                 key={decade._id}
                 className="relative"
@@ -52,13 +66,13 @@ export default function HistoryPage() {
                       exit={{ opacity: 0, height: 0 }}
                       className="space-y-8 overflow-visible"
                     >
-                      {decade.events.map((event: any, index: number) => (
+                      {decade.events.map((event: Event) => (
                         <motion.div
                           key={event._key}
                           className="relative"
                           initial={{ opacity: 0, y: 20 }}
                           animate={{ opacity: 1, y: 0 }}
-                          transition={{ delay: index * 0.1 }}
+                          transition={{ delay: 0.1 }}
                         >
                           <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
                             <div className="text-xl font-bold bg-secondary/20 text-secondary-foreground rounded-full w-16 h-16 flex items-center justify-center backdrop-blur-sm">
@@ -66,7 +80,7 @@ export default function HistoryPage() {
                             </div>
                           </div>
                           <div className="grid grid-cols-2 gap-16">
-                            {index % 2 === 0 ? (
+                            {event.year % 2 === 0 ? (
                               <>
                                 <div className="text-right">
                                   <h3 className="text-xl font-bold mb-2">{event.title}</h3>

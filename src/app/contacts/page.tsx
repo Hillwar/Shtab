@@ -6,32 +6,6 @@ import { PageHeader } from '../components/ui/PageHeader'
 import { Card } from '../components/ui/Card'
 import { MapPin, Phone, Mail, Clock } from 'lucide-react'
 
-const contactInfo = [
-  {
-    icon: MapPin,
-    title: 'Адрес',
-    content: 'г. Архангельск, пр. Троицкий, д. 96, каб. 22',
-    link: 'https://maps.google.com/?q=Архангельск,+Троицкий+96'
-  },
-  {
-    icon: Phone,
-    title: 'Телефон',
-    content: '+7 (8182) 28-58-69',
-    link: 'tel:+78182285869'
-  },
-  {
-    icon: Mail,
-    title: 'Email',
-    content: 'agsh@gmail.com',
-    link: 'mailto:agsh@gmail.com'
-  },
-  {
-    icon: Clock,
-    title: 'Время работы',
-    content: 'Пн-Пт: 10:00 - 18:00\nСб-Вс: выходной'
-  }
-]
-
 const socialLinks = [
   {
     name: 'VK',

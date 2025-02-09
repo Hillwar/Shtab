@@ -11,7 +11,7 @@ export async function POST(req: NextRequest) {
     }
     
     return NextResponse.json({ revalidated: false, now: Date.now() })
-  } catch (err) {
+  } catch {
     return NextResponse.json({ revalidated: false, now: Date.now() })
   }
 } 
