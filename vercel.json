@@ -1,0 +1,52 @@
+{
+  "git": {
+    "deploymentEnabled": {
+      "main": true,
+      "develop": true
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/$1",
+      "has": [
+        {
+          "type": "host",
+          "value": "dev-shtab.vercel.app"
+        }
+      ]
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Environment",
+          "value": "production"
+        }
+      ],
+      "has": [
+        {
+          "type": "host",
+          "value": "shtab.vercel.app"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Environment",
+          "value": "development"
+        }
+      ],
+      "has": [
+        {
+          "type": "host",
+          "value": "dev-shtab.vercel.app"
+        }
+      ]
+    }
+  ]
+} 

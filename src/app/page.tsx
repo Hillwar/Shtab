@@ -2,15 +2,13 @@
 
 import { motion } from 'framer-motion'
 import { Layout } from './components/layout/Layout'
-import { Card } from './components/ui/Card'
-import Link from 'next/link'
 import Image from 'next/image'
-import { MAIN_PAGE } from './lib/constants/content'
+import Link from 'next/link'
 
 export default function HomePage() {
   return (
     <Layout>
-      {/* Hero Section */}
+      {/* Coming Soon Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-indigo-600/20 to-purple-600/20" />
@@ -30,10 +28,10 @@ export default function HomePage() {
               className="relative w-32 h-32 md:w-48 md:h-48 mx-auto"
             >
               <Image
-                src={MAIN_PAGE.hero.image.src}
+                src="/images/logo.png"
                 alt="АГШШ"
-                width={MAIN_PAGE.hero.image.width}
-                height={MAIN_PAGE.hero.image.height}
+                width={200}
+                height={200}
                 className="object-contain"
               />
             </motion.div>
@@ -45,7 +43,7 @@ export default function HomePage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
               >
-                <div className="heading-gradient">{MAIN_PAGE.hero.title}</div>
+                <div className="heading-gradient">Скоро открытие</div>
               </motion.h1>
               
               <motion.p 
@@ -54,7 +52,7 @@ export default function HomePage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
               >
-                {MAIN_PAGE.hero.description}
+                Сайт Архангельского городского штаба школьников имени А.П. Гайдара находится в разработке и скоро будет доступен.
               </motion.p>
             </div>
 
@@ -64,46 +62,58 @@ export default function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
             >
-              {MAIN_PAGE.hero.buttons.map((button) => (
-                <Link 
-                  key={button.link} 
-                  href={button.link}
-                  className={button.isPrimary ? "button-primary" : "button-secondary"}
-                >
-                  {button.text}
-                </Link>
-              ))}
+              <a 
+                href="https://vk.com/shtab_29" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="button-primary"
+              >
+                Группа ВКонтакте
+              </a>
+              <Link 
+                href="https://dev-shtab.vercel.app" 
+                className="button-secondary"
+              >
+                Перейти на dev-версию
+              </Link>
             </motion.div>
           </motion.div>
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Countdown Section */}
       <section className="container mx-auto mb-24 pt-12 px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">
-          Наши направления
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {MAIN_PAGE.directions
-            .sort((a, b) => a.order - b.order)
-            .map((direction, index) => (
-              <motion.div
-                key={direction.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <Link href={direction.link}>
-                  <Card className="h-full hover:scale-105 transition-transform duration-300">
-                    <div className="p-8 text-center">
-                      <span className="text-5xl mb-6 block">{direction.icon}</span>
-                      <h3 className="text-2xl font-semibold mb-4">{direction.title}</h3>
-                      <p className="text-white/70">{direction.description}</p>
-                    </div>
-                  </Card>
-                </Link>
-              </motion.div>
-          ))}
+        <div className="glass-card p-8 max-w-3xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-8 text-gradient">
+            Следите за обновлениями
+          </h2>
+          <p className="text-white/80 text-center mb-6">
+            Мы готовим для вас новый современный сайт, где вы сможете узнать всё о деятельности АГШШ, 
+            наших мероприятиях и программах. Следите за новостями в наших социальных сетях.
+          </p>
+          <div className="flex justify-center space-x-4">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="glass p-4 rounded-lg"
+            >
+              <p className="text-lg font-semibold text-gradient">60+</p>
+              <p className="text-sm text-white/70">лет истории</p>
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="glass p-4 rounded-lg"
+            >
+              <p className="text-lg font-semibold text-gradient">4</p>
+              <p className="text-sm text-white/70">направления</p>
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="glass p-4 rounded-lg"
+            >
+              <p className="text-lg font-semibold text-gradient">1000+</p>
+              <p className="text-sm text-white/70">участников</p>
+            </motion.div>
+          </div>
         </div>
       </section>
     </Layout>
