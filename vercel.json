@@ -1,0 +1,19 @@
+{
+  "git": {
+    "deploymentEnabled": {
+      "main": true,
+      "develop": true
+    }
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Environment",
+          "value": "development"
+        }
+      ]
+    }
+  ]
+} 
