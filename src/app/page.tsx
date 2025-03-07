@@ -1,13 +1,11 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Layout } from './components/layout/Layout'
-import Image from 'next/image'
-import Link from 'next/link'
+import { ComingSoonLayout } from './components/layout/ComingSoonLayout'
 
 export default function HomePage() {
   return (
-    <Layout>
+    <ComingSoonLayout>
       {/* Coming Soon Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center">
         <div className="absolute inset-0 overflow-hidden">
@@ -21,21 +19,6 @@ export default function HomePage() {
             transition={{ duration: 0.5 }}
             className="space-y-12"
           >
-            <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="relative w-32 h-32 md:w-48 md:h-48 mx-auto"
-            >
-              <Image
-                src="/images/logo.png"
-                alt="АГШШ"
-                width={200}
-                height={200}
-                className="object-contain"
-              />
-            </motion.div>
-            
             <div className="space-y-6">
               <motion.h1 
                 className="text-4xl md:text-6xl lg:text-7xl font-bold"
@@ -70,12 +53,6 @@ export default function HomePage() {
               >
                 Группа ВКонтакте
               </a>
-              <Link 
-                href="https://dev-shtab.vercel.app" 
-                className="button-secondary"
-              >
-                Перейти на dev-версию
-              </Link>
             </motion.div>
           </motion.div>
         </div>
@@ -116,6 +93,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-    </Layout>
+    </ComingSoonLayout>
   )
 } 
