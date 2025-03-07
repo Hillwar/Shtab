@@ -13,7 +13,7 @@ export const NAVIGATION = {
     contacts: {
       address: 'г. Архангельск, наб. Северной Двины 73',
       phone: '+7 (8182) 28-58-69',
-      email: 'agsh@gmail.com'
+      email: ''
     },
     socialLinks: [
       { platform: 'VK', url: 'https://vk.com/shtab_29', icon: 'VK' }
