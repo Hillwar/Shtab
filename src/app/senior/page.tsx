@@ -4,8 +4,6 @@ import { motion } from 'framer-motion'
 import { Layout } from '../components/layout/Layout'
 import { PageHeader } from '../components/ui/PageHeader'
 import { Card } from '../components/ui/Card'
-import Image from 'next/image'
-import { IMAGES } from '../lib/constants/content'
 import { useState } from 'react'
 import { Gallery } from '../components/ui/Gallery'
 
