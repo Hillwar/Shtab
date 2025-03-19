@@ -27,7 +27,7 @@ export const FORMS_CONFIG = {
   // Настройки отображения кнопок "Подать заявку"
   showApplicationButton: {
     senior: true,
-    education: true,
+    education: false,
     winter: false
   }
 }

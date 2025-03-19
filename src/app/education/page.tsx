@@ -5,6 +5,7 @@ import { Layout } from '../components/layout/Layout'
 import { PageHeader } from '../components/ui/PageHeader'
 import { Card } from '../components/ui/Card'
 import { Gallery } from '../components/ui/Gallery'
+import { FORMS_CONFIG } from '../lib/config'
 
 const educationPrograms = [
   {
@@ -85,20 +86,22 @@ export default function EducationPage() {
 
       {/* Programs grid */}
       <div className="container mx-auto px-4 py-12">
-        <div className="text-center mb-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-          >
-            <button 
-              onClick={() => window.location.href = 'https://forms.gle/example-education-form'} 
-              className="button-primary"
+        {FORMS_CONFIG.showApplicationButton.education && (
+          <div className="text-center mb-12">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
             >
-              Подать заявку
-            </button>
-          </motion.div>
-        </div>
+              <button 
+                onClick={() => window.location.href = FORMS_CONFIG.formLinks.education} 
+                className="button-primary"
+              >
+                Подать заявку
+              </button>
+            </motion.div>
+          </div>
+        )}
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {educationPrograms.map((program, index) => (

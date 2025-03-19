@@ -5,6 +5,7 @@ import { Layout } from '../components/layout/Layout'
 import { PageHeader } from '../components/ui/PageHeader'
 import Image from 'next/image';
 import { Gallery } from '../components/ui/Gallery'
+import { FORMS_CONFIG } from '../lib/config'
 
 // Добавляем массив с фотографиями после существующих импортов
 const galleryImages = [
@@ -55,6 +56,23 @@ export default function WinterPage() {
       />
 
       <div className="container mx-auto px-4 py-12">
+        {FORMS_CONFIG.showApplicationButton.winter && (
+          <div className="text-center mb-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+            >
+              <button 
+                onClick={() => window.location.href = FORMS_CONFIG.formLinks.winter} 
+                className="button-primary"
+              >
+                Подать заявку
+              </button>
+            </motion.div>
+          </div>
+        )}
+        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Основная информация */}
           <motion.div

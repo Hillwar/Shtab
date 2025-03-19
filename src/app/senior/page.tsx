@@ -6,6 +6,7 @@ import { PageHeader } from '../components/ui/PageHeader'
 import { Card } from '../components/ui/Card'
 import { useState } from 'react'
 import { Gallery } from '../components/ui/Gallery'
+import { FORMS_CONFIG } from '../lib/config'
 
 const campFeatures = [
   {
@@ -405,20 +406,22 @@ export default function SeniorPage() {
         />
 
         {/* Button section */}
-        <div className="text-center my-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-          >
-            <button 
-              onClick={() => window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLScu4Mt-6aB-xhSOYElng0ZPhBdFYr9q9mFAwlzmoVWsyQ0aew/viewform'} 
-              className="button-primary"
+        {FORMS_CONFIG.showApplicationButton.senior && (
+          <div className="text-center my-12">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
             >
-              Подать заявку
-            </button>
-          </motion.div>
-        </div>
+              <button 
+                onClick={() => window.location.href = FORMS_CONFIG.formLinks.senior} 
+                className="button-primary"
+              >
+                Подать заявку
+              </button>
+            </motion.div>
+          </div>
+        )}
 
         {/* Features grid */}
         <section className="my-24">

@@ -1,3 +1,5 @@
+import { MAIN_PAGE_CONFIG } from '../config'
+
 export const IMAGES = {
   hero: {
     src: '/images/agsh-logo.png',
@@ -39,9 +41,9 @@ export const MAIN_PAGE = {
     description: 'Архангельский городской штаб школьников - молодежная организация с более чем 60-летней историей. Развитие, обучение, дружба и счастье людей - наши главные цели.',
     image: IMAGES.hero,
     currentApplication: {
-      isActive: true,
-      text: 'Сейчас идет подача заявок на Сбор!',
-      eventType: 'senior' // 'senior', 'winter', or 'education'
+      isActive: MAIN_PAGE_CONFIG.currentApplication.isActive,
+      text: MAIN_PAGE_CONFIG.currentApplication.texts[MAIN_PAGE_CONFIG.currentApplication.currentEvent as keyof typeof MAIN_PAGE_CONFIG.currentApplication.texts],
+      eventType: MAIN_PAGE_CONFIG.currentApplication.currentEvent === 'none' ? '' : MAIN_PAGE_CONFIG.currentApplication.currentEvent
     }
   },
   directions: [
