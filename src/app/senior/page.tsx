@@ -11,7 +11,7 @@ import { Gallery } from '../components/ui/Gallery'
 
 const campFeatures = [
   {
-    title: 'Традиции сбора',
+    title: 'Традиции Сбора',
     description: 'Уникальные традиции, передающиеся из поколения в поколение: вечерние огоньки, орлятский круг, творческие дела.',
     icon: '🔥'
   },
@@ -212,7 +212,7 @@ const campSchedule: CampSchedule = {
     '2024-07-22': {
       title: 'День 21',
       events: [
-        'Закрытие сбора',
+        'Закрытие Сбора',
         'Общее фото',
         'Отъезд участников'
       ]
@@ -224,7 +224,7 @@ const campSchedule: CampSchedule = {
 const galleryImages = [
   {
     src: '/images/senior/1.jpg',
-    alt: 'Общее фото участников сбора',
+    alt: 'Общее фото участников Сбора',
     width: 1920,
     height: 1080
   },
@@ -254,7 +254,7 @@ const galleryImages = [
   },
   {
     src: '/images/senior/6.jpg',
-    alt: 'Закрытие сбора',
+    alt: 'Закрытие Сбора',
     width: 1920,
     height: 1080
   }
@@ -288,7 +288,7 @@ function Calendar() {
           <div className="flex items-center space-x-2 text-sm text-white/60">
             <div className="flex items-center">
               <span className="w-3 h-3 rounded-full bg-primary/20 border-2 border-primary/50 mr-2" />
-              Дни сбора
+              Дни Сбора
             </div>
             <div className="flex items-center">
               <span className="w-3 h-3 rounded-full bg-white/5 mr-2" />
@@ -403,41 +403,29 @@ export default function SeniorPage() {
       <div className="container mx-auto px-4">
         <PageHeader
           title="Сбор старшеклассников"
-          description="Легендарный летний сбор АГШШ на Копачёвской поляне"
+          description="Легендарный летний лагерь АГШШ на Копачёвской поляне"
         />
 
-        {/* Hero section */}
-        <section className="relative rounded-3xl overflow-hidden my-12">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-purple-900/90" />
-          <Image
-            src={IMAGES.seniorCamp.src}
-            alt="Сбор старшеклассников"
-            width={IMAGES.seniorCamp.width}
-            height={IMAGES.seniorCamp.height}
-            className="w-full h-[60vh] object-cover mix-blend-overlay"
-          />
-          <div className="absolute inset-0 flex items-center justify-center text-center p-8">
-            <div className="max-w-3xl">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="mb-8"
-              >
-                <span className="inline-block px-4 py-2 rounded-full bg-blue-500/20 text-blue-200 backdrop-blur-sm mb-4">
-                  Лето 2024
-                </span>
-                <h2 className="text-3xl md:text-4xl font-bold">
-                  64-й Сбор старшеклассников
-                </h2>
-              </motion.div>
-            </div>
-          </div>
-        </section>
+        {/* Button section */}
+        <div className="text-center my-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+          >
+            <button 
+              onClick={() => window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLScu4Mt-6aB-xhSOYElng0ZPhBdFYr9q9mFAwlzmoVWsyQ0aew/viewform'} 
+              className="button-primary"
+            >
+              Подать заявку
+            </button>
+          </motion.div>
+        </div>
 
         {/* Features grid */}
         <section className="my-24">
           <h2 className="text-3xl font-bold text-center mb-12">
-            Особенности сбора
+            Особенности Сбора
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {campFeatures.map((feature, index) => (
@@ -468,7 +456,7 @@ export default function SeniorPage() {
         {/* Calendar section */}
         <section className="my-24">
           <h2 className="text-3xl font-bold text-center mb-12">
-            Расписание сбора
+            Расписание Сбора
           </h2>
           <Calendar />
         </section>
@@ -480,7 +468,7 @@ export default function SeniorPage() {
           </h2>
           <Gallery 
             images={galleryImages}
-            title="Моменты сбора старшеклассников"
+            title="Моменты Сбора старшеклассников"
           />
         </section>
       </div>

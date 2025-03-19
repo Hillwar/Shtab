@@ -51,7 +51,7 @@ export default function WinterPage() {
     <Layout>
       <PageHeader
         title="Зимовка"
-        description="Традиционное зимнее мероприятие АГШШ"
+        description="Традиционное зимнее дело АГШШ"
       />
 
       <div className="container mx-auto px-4 py-12">
@@ -64,9 +64,9 @@ export default function WinterPage() {
             className="space-y-6"
           >
             <div className="glass-card p-6">
-              <h2 className="text-2xl font-bold mb-4 text-gradient">О мероприятии</h2>
+              <h2 className="text-2xl font-bold mb-4 text-gradient">О Зимовке</h2>
               <p className="text-white/80">
-                Зимовка - это уникальное мероприятие, которое проводится в зимний период.
+                Зимовка - это уникальное дело АГШШ, которое проводится в зимний период.
                 Это время активного отдыха, обучения и развития в атмосфере зимней сказки.
               </p>
             </div>

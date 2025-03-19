@@ -3,7 +3,7 @@ export const NAVIGATION = {
     { title: 'Главная', path: '/' },
     { title: 'История', path: '/history' },
     { title: 'Учеба актива', path: '/education' },
-    { title: 'Сборы', path: '/senior' },
+    { title: 'Сбор', path: '/senior' },
     { title: 'Зимовка', path: '/winter' },
     { title: 'Соловки', path: '/solovki' },
     { title: 'Контакты', path: '/contacts' },
@@ -11,7 +11,7 @@ export const NAVIGATION = {
   footer: {
     description: 'Архангельский городской штаб школьников - молодежная организация с более чем 60-летней историей. Развитие, обучение, дружба и счастье людей - наши главные цели.',
     contacts: {
-      address: 'г. Архангельск, наб. Северной Двины 73',
+      address: 'г. Архангельск, Набережная Северной Двины д73, 2 этаж, 22 кабинет',
       phone: '+7 (8182) 28-58-69',
       email: ''
     },

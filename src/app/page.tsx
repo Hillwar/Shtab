@@ -64,15 +64,17 @@ export default function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
             >
-              {MAIN_PAGE.hero.buttons.map((button) => (
-                <Link 
-                  key={button.link} 
-                  href={button.link}
-                  className={button.isPrimary ? "button-primary" : "button-secondary"}
+              {MAIN_PAGE.hero.currentApplication.isActive && (
+                <motion.div
+                  className="bg-gradient-to-r from-blue-600/70 to-purple-600/70 p-4 rounded-2xl backdrop-blur-sm border border-white/10 text-center"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
                 >
-                  {button.text}
-                </Link>
-              ))}
+                  <Link href={`/${MAIN_PAGE.hero.currentApplication.eventType}`} className="text-xl font-bold">
+                    👉 {MAIN_PAGE.hero.currentApplication.text}
+                  </Link>
+                </motion.div>
+              )}
             </motion.div>
           </motion.div>
         </div>

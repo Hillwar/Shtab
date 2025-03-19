@@ -80,11 +80,26 @@ export default function EducationPage() {
     <Layout>
       <PageHeader
         title="Учеба актива"
-        description="Программы развития лидерских качеств и творческого потенциала"
+        description="Программа развития лидерских качеств и творческого потенциала"
       />
 
       {/* Programs grid */}
       <div className="container mx-auto px-4 py-12">
+        <div className="text-center mb-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+          >
+            <button 
+              onClick={() => window.location.href = 'https://forms.gle/example-education-form'} 
+              className="button-primary"
+            >
+              Подать заявку
+            </button>
+          </motion.div>
+        </div>
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {educationPrograms.map((program, index) => (
             <motion.div

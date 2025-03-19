@@ -34,8 +34,8 @@ export default function ContactsPage() {
               <MapPin className="w-8 h-8 text-primary" />
               <h3 className="text-xl font-semibold">Адрес</h3>
               <p className="text-white/70">
-                г. Архангельск, пр. Троицкий, д. 96,<br />
-                каб. 22
+                г. Архангельск, Набережная Северной Двины д73,<br />
+                2 этаж, 22 кабинет
               </p>
             </div>
           </Card>
@@ -55,7 +55,7 @@ export default function ContactsPage() {
               <Mail className="w-8 h-8 text-primary" />
               <h3 className="text-xl font-semibold">Email</h3>
               <p className="text-white/70">
-                agsh@gmail.com
+                
               </p>
             </div>
           </Card>
@@ -74,7 +74,7 @@ export default function ContactsPage() {
 
         <div className="mt-12 glass rounded-3xl overflow-hidden">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1801.1905433963292!2d40.51576231744385!3d64.53918499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4418380417f16d67%3A0x8b1e3744c4194035!2z0J_RgNC-0YHQvy4g0KLRgNC-0LjRhtC60LjQuSwgOTYsINCQ0YDRhdCw0L3Qs9C10LvRjNGB0LosINCQ0YDRhdCw0L3Qs9C10LvRjNGB0LrQsNGPINC-0LHQuy4sIDE2MzAwMA!5e0!3m2!1sru!2sru!4v1631234567890!5m2!1sru!2sru"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1802.100840646764!2d40.51912837703142!3d64.53327258766328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x441837fb21e7ac7d%3A0x84e7cea46d1dbb46!2z0J3QsNCxLiDQodC10LLQtdGA0L3QvtC5INCU0LLQuNC90YssIDczLCDQkNGA0YXQsNC90LPQtdC70YzRgdC6LCDQkNGA0YXQsNC90LPQtdC70YzRgdC60LDRjyDQvtCx0LsuLCAxNjMwMDA!5e0!3m2!1sru!2sru!4v1709986701021!5m2!1sru!2sru"
             width="100%"
             height="450"
             style={{ border: 0 }}
