@@ -223,37 +223,37 @@ const campSchedule: CampSchedule = {
 const galleryImages = [
   {
     src: '/images/senior/1.jpg',
-    alt: 'Общее фото участников Сбора',
+    alt: 'Сбор - Общее фото',
     width: 1920,
     height: 1080
   },
   {
-    src: '/images/senior/2.jpg',
-    alt: 'Вечерний огонёк',
+    src: '/images/senior/18nctKRNIVg.jpg',
+    alt: 'Сбор - Вечерний огонёк',
     width: 1920,
     height: 1080
   },
   {
-    src: '/images/senior/3.jpg',
-    alt: 'Творческие мастерские',
+    src: '/images/senior/3rONH790X0Q.jpg',
+    alt: 'Сбор - Творческие мастерские',
     width: 1920,
     height: 1080
   },
   {
-    src: '/images/senior/4.jpg',
-    alt: 'Спортивные мероприятия',
+    src: '/images/senior/GlAdsvgT-jw.jpg',
+    alt: 'Сбор - Спортивные мероприятия',
     width: 1920,
     height: 1080
   },
   {
-    src: '/images/senior/5.jpg',
-    alt: 'Командные игры',
+    src: '/images/senior/KQdBLv67oaU.jpg',
+    alt: 'Сбор - Командные игры',
     width: 1920,
     height: 1080
   },
   {
-    src: '/images/senior/6.jpg',
-    alt: 'Закрытие Сбора',
+    src: '/images/senior/Om6LciaxUbA.jpg',
+    alt: 'Сбор - Закрытие',
     width: 1920,
     height: 1080
   }

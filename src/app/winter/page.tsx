@@ -10,38 +10,38 @@ import { FORMS_CONFIG } from '../lib/config'
 // Добавляем массив с фотографиями после существующих импортов
 const galleryImages = [
   {
-    src: '/images/winter/1.jpg',
-    alt: 'Зимние активности',
+    src: '/images/winter/0_rxP_2GwtI.jpg',
+    alt: 'Зимовка - Общее фото',
     width: 1920,
     height: 1080
   },
   {
-    src: '/images/winter/2.jpg',
-    alt: 'Командные игры',
+    src: '/images/winter/0ZGxt98XV94.jpg',
+    alt: 'Зимовка - Зимние активности',
     width: 1920,
     height: 1080
   },
   {
-    src: '/images/winter/3.jpg',
-    alt: 'Творческие мастерские',
+    src: '/images/winter/AMC2AOhao5E.jpg',
+    alt: 'Зимовка - Командные игры',
     width: 1920,
     height: 1080
   },
   {
-    src: '/images/winter/4.jpg',
-    alt: 'Вечерние мероприятия',
+    src: '/images/winter/BntYYoTNaEI.jpg',
+    alt: 'Зимовка - Творческие мастерские',
     width: 1920,
     height: 1080
   },
   {
-    src: '/images/winter/5.jpg',
-    alt: 'Спортивные соревнования',
+    src: '/images/winter/PcRLr_FjBn0.jpg',
+    alt: 'Зимовка - Вечерние мероприятия',
     width: 1920,
     height: 1080
   },
   {
-    src: '/images/winter/6.jpg',
-    alt: 'Общее фото участников',
+    src: '/images/winter/WP8apxrW2g4.jpg',
+    alt: 'Зимовка - Спортивные соревнования',
     width: 1920,
     height: 1080
   }

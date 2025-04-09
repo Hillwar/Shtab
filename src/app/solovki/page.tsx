@@ -64,37 +64,37 @@ const expeditionDetails = [
 const galleryImages = [
   {
     src: '/images/solovki/1.jpg',
-    alt: 'Соловецкий монастырь',
+    alt: 'Соловки - Общее фото',
     width: 1920,
     height: 1080
   },
   {
-    src: '/images/solovki/2.jpg',
-    alt: 'Археологические раскопки',
+    src: '/images/solovki/6PuDGwo90Is.jpg',
+    alt: 'Соловки - Монастырь',
     width: 1920,
     height: 1080
   },
   {
-    src: '/images/solovki/3.jpg',
-    alt: 'Природа Соловков',
+    src: '/images/solovki/B499PNG8BXc.jpg',
+    alt: 'Соловки - Природа',
     width: 1920,
     height: 1080
   },
   {
-    src: '/images/solovki/4.jpg',
-    alt: 'Морская прогулка',
+    src: '/images/solovki/IMUjT-dGTtI.jpg',
+    alt: 'Соловки - Морская прогулка',
     width: 1920,
     height: 1080
   },
   {
-    src: '/images/solovki/5.jpg',
-    alt: 'Исследовательская работа',
+    src: '/images/solovki/JaTd-DymHZU.jpg',
+    alt: 'Соловки - Исследования',
     width: 1920,
     height: 1080
   },
   {
-    src: '/images/solovki/6.jpg',
-    alt: 'Закат на Соловках',
+    src: '/images/solovki/txaKymp_4vM.jpg',
+    alt: 'Соловки - Закат',
     width: 1920,
     height: 1080
   }

@@ -39,38 +39,38 @@ const educationPrograms = [
 
 const galleryImages = [
   {
-    src: '/images/education/1.jpg',
-    alt: 'Тренинг лидерства',
+    src: '/images/ua/5dJwq9HyRaI.jpg',
+    alt: 'Учеба актива - Общее фото',
     width: 1920,
     height: 1080
   },
   {
-    src: '/images/education/2.jpg',
-    alt: 'Командная работа',
+    src: '/images/ua/BDUgX8qWcG8.jpg',
+    alt: 'Учеба актива - Работа в группах',
     width: 1920,
     height: 1080
   },
   {
-    src: '/images/education/3.jpg',
-    alt: 'Мастер-класс',
+    src: '/images/ua/CO5hH7LGz6s.jpg',
+    alt: 'Учеба актива - Тренинги',
     width: 1920,
     height: 1080
   },
   {
-    src: '/images/education/4.jpg',
-    alt: 'Презентация проектов',
+    src: '/images/ua/DULWhviyYsw.jpg',
+    alt: 'Учеба актива - Мастер-классы',
     width: 1920,
     height: 1080
   },
   {
-    src: '/images/education/5.jpg',
-    alt: 'Творческие занятия',
+    src: '/images/ua/H2da1vj3_jI.jpg',
+    alt: 'Учеба актива - Командная работа',
     width: 1920,
     height: 1080
   },
   {
-    src: '/images/education/6.jpg',
-    alt: 'Групповая дискуссия',
+    src: '/images/ua/N7-2S_pQ3xA.jpg',
+    alt: 'Учеба актива - Презентации',
     width: 1920,
     height: 1080
   }
