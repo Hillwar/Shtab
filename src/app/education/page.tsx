@@ -131,49 +131,6 @@ export default function EducationPage() {
           ))}
         </div>
 
-        {/* Schedule section */}
-        <section className="mt-24">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Расписание занятий
-          </h2>
-          <Card>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8">
-              <div>
-                <h3 className="text-xl font-semibold text-white mb-4">
-                  Регулярные занятия
-                </h3>
-                <ul className="space-y-4">
-                  <li className="text-white/80">
-                    <span className="font-semibold">Понедельник:</span> Школа актива (16:00 - 18:00)
-                  </li>
-                  <li className="text-white/80">
-                    <span className="font-semibold">Среда:</span> Творческие мастерские (15:00 - 17:00)
-                  </li>
-                  <li className="text-white/80">
-                    <span className="font-semibold">Суббота:</span> Практические занятия (12:00 - 15:00)
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-white mb-4">
-                  Специальные мероприятия
-                </h3>
-                <ul className="space-y-4">
-                  <li className="text-white/80">
-                    <span className="font-semibold">Осенние сборы:</span> Октябрь
-                  </li>
-                  <li className="text-white/80">
-                    <span className="font-semibold">Зимняя школа:</span> Январь
-                  </li>
-                  <li className="text-white/80">
-                    <span className="font-semibold">Весенний фестиваль:</span> Апрель
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </Card>
-        </section>
-
         {/* Gallery section */}
         <section className="my-24">
           <h2 className="text-3xl font-bold text-center mb-12">
