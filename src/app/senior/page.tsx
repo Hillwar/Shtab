@@ -327,6 +327,7 @@ const galleryImages = [
 
 function Calendar() {
   const [hoveredDate, setHoveredDate] = useState<string | null>(null)
+  const [clickedDate, setClickedDate] = useState<string | null>(null)
   
   // Создаем массив дней июля
   const days = Array.from({ length: 31 }, (_, i) => {
@@ -388,6 +389,7 @@ function Calendar() {
                 className="relative"
                 onMouseEnter={() => setHoveredDate(date)}
                 onMouseLeave={() => setHoveredDate(null)}
+                onClick={() => setClickedDate(date)}
               >
                 <div
                   className={`
@@ -450,6 +452,20 @@ function Calendar() {
                           </motion.li>
                         ))}
                       </ul>
+                    </div>
+                  </motion.div>
+                )}
+
+                {/* Сообщение 'soon' при клике */}
+                {clickedDate === date && !hasEvents && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                    className="absolute z-50 bottom-full left-1/2 -translate-x-1/2 mb-4 w-32"
+                  >
+                    <div className="bg-[rgb(15,23,42)] border border-primary/50 rounded-2xl p-4 shadow-xl text-center">
+                      <span className="text-white text-sm">soon</span>
                     </div>
                   </motion.div>
                 )}
