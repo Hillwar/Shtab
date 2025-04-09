@@ -222,38 +222,104 @@ const campSchedule: CampSchedule = {
 // Добавляем массив с фотографиями после существующих констант
 const galleryImages = [
   {
-    src: '/images/senior/1.jpg',
+    src: '/images/senior/18nctKRNIVg.jpg',
     alt: 'Сбор - Общее фото',
     width: 1920,
     height: 1080
   },
   {
-    src: '/images/senior/18nctKRNIVg.jpg',
+    src: '/images/senior/3rONH790X0Q.jpg',
     alt: 'Сбор - Вечерний огонёк',
     width: 1920,
     height: 1080
   },
   {
-    src: '/images/senior/3rONH790X0Q.jpg',
+    src: '/images/senior/GlAdsvgT-jw.jpg',
     alt: 'Сбор - Творческие мастерские',
     width: 1920,
     height: 1080
   },
   {
-    src: '/images/senior/GlAdsvgT-jw.jpg',
+    src: '/images/senior/KQdBLv67oaU.jpg',
     alt: 'Сбор - Спортивные мероприятия',
     width: 1920,
     height: 1080
   },
   {
-    src: '/images/senior/KQdBLv67oaU.jpg',
+    src: '/images/senior/Om6LciaxUbA.jpg',
     alt: 'Сбор - Командные игры',
     width: 1920,
     height: 1080
   },
   {
-    src: '/images/senior/Om6LciaxUbA.jpg',
+    src: '/images/senior/SkcGdlrC2U8.jpg',
     alt: 'Сбор - Закрытие',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/senior/TsecprwEfyE.jpg',
+    alt: 'Сбор - Творческие выступления',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/senior/Z6ptYdYrep4.jpg',
+    alt: 'Сбор - Работа в группах',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/senior/cNsaqKY7s4s.jpg',
+    alt: 'Сбор - Общие мероприятия',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/senior/ddEMlhHgnpI.jpg',
+    alt: 'Сбор - Командные соревнования',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/senior/ifB8z7q3fi4.jpg',
+    alt: 'Сбор - Вечерние активности',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/senior/k4MeItVIDZ4.jpg',
+    alt: 'Сбор - Мастер-классы',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/senior/mbaY5qbP2BI.jpg',
+    alt: 'Сбор - Творческие занятия',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/senior/qJVRq_8LiPU.jpg',
+    alt: 'Сбор - Спортивные игры',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/senior/s99lbEbqCX4 (1).jpg',
+    alt: 'Сбор - Общее фото участников',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/senior/uIFzt8Bz-6U.jpg',
+    alt: 'Сбор - Вечерние мероприятия',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/senior/yVkhz0nQuio.jpg',
+    alt: 'Сбор - Финальное мероприятие',
     width: 1920,
     height: 1080
   }
