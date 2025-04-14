@@ -40,37 +40,97 @@ const educationPrograms = [
 const galleryImages = [
   {
     src: '/images/ua/5dJwq9HyRaI.jpg',
-    alt: 'Учеба актива - Общее фото',
+    alt: '',
     width: 1920,
     height: 1080
   },
   {
     src: '/images/ua/BDUgX8qWcG8.jpg',
-    alt: 'Учеба актива - Работа в группах',
+    alt: '',
     width: 1920,
     height: 1080
   },
   {
     src: '/images/ua/CO5hH7LGz6s.jpg',
-    alt: 'Учеба актива - Тренинги',
+    alt: '',
     width: 1920,
     height: 1080
   },
   {
     src: '/images/ua/DULWhviyYsw.jpg',
-    alt: 'Учеба актива - Мастер-классы',
+    alt: '',
     width: 1920,
     height: 1080
   },
   {
     src: '/images/ua/H2da1vj3_jI.jpg',
-    alt: 'Учеба актива - Командная работа',
+    alt: '',
     width: 1920,
     height: 1080
   },
   {
     src: '/images/ua/N7-2S_pQ3xA.jpg',
-    alt: 'Учеба актива - Презентации',
+    alt: '',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/ua/RQk9ZTgJnos.jpg',
+    alt: '',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/ua/UJulXUU3kX4.jpg',
+    alt: '',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/ua/Vdp2s1NnffE.jpg',
+    alt: '',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/ua/bCphpgMJybM.jpg',
+    alt: '',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/ua/eDFT4968zrk.jpg',
+    alt: '',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/ua/lbdnvFjR6Gk.jpg',
+    alt: '',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/ua/qkHhsWO1Jys.jpg',
+    alt: '',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/ua/vjuxsu7VzpQ.jpg',
+    alt: '',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/ua/z3RikLnBa8o.jpg',
+    alt: '',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/ua/zI5cAvIPyPc.jpg',
+    alt: '',
     width: 1920,
     height: 1080
   }
@@ -138,7 +198,6 @@ export default function EducationPage() {
           </h2>
           <Gallery 
             images={galleryImages}
-            title="Моменты учебы актива"
           />
         </section>
       </div>

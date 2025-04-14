@@ -47,281 +47,112 @@ interface CampSchedule {
 const campSchedule: CampSchedule = {
   startDate: '2024-07-02',
   endDate: '2024-07-22',
-  events: {
-    '2024-07-02': {
-      title: 'День 1',
-      events: [
-        'Заезд участников',
-        'Размещение',
-        'Знакомство с территорией'
-      ]
-    },
-    '2024-07-03': {
-      title: 'День 2',
-      events: [
-        'Торжественное открытие',
-        'Вечер знакомств',
-        'Огонёк знакомств'
-      ]
-    },
-    '2024-07-04': {
-      title: 'День 3',
-      events: [
-        'Образовательные занятия',
-        'Творческие мастерские',
-        'Вечерние мероприятия'
-      ]
-    },
-    '2024-07-05': {
-      title: 'День 4',
-      events: [
-        'Спортивные мероприятия',
-        'Мастер-классы',
-        'Вечерний концерт'
-      ]
-    },
-    '2024-07-06': {
-      title: 'День 5',
-      events: [
-        'Проектная работа',
-        'Командные игры',
-        'Творческий вечер'
-      ]
-    },
-    '2024-07-07': {
-      title: 'День 6',
-      events: [
-        'Туристический поход',
-        'Песни у костра',
-        'Ночной огонёк'
-      ]
-    },
-    '2024-07-08': {
-      title: 'День 7',
-      events: [
-        'День самоуправления',
-        'Подготовка к вечернему делу',
-        'Вечер легенд'
-      ]
-    },
-    '2024-07-09': {
-      title: 'День 8',
-      events: [
-        'Спортивная эстафета',
-        'Интеллектуальные игры',
-        'Дискотека'
-      ]
-    },
-    '2024-07-10': {
-      title: 'День 9',
-      events: [
-        'Мастер-классы по выбору',
-        'Подготовка творческих номеров',
-        'Музыкальный вечер'
-      ]
-    },
-    '2024-07-11': {
-      title: 'День 10',
-      events: [
-        'День театра',
-        'Репетиции спектаклей',
-        'Театральные постановки'
-      ]
-    },
-    '2024-07-12': {
-      title: 'День 11',
-      events: [
-        'Экологическая акция',
-        'Работа над проектами',
-        'Вечер талантов'
-      ]
-    },
-    '2024-07-13': {
-      title: 'День 12',
-      events: [
-        'Спортивный турнир',
-        'Творческие мастерские',
-        'Вечер дружбы'
-      ]
-    },
-    '2024-07-14': {
-      title: 'День 13',
-      events: [
-        'День науки',
-        'Научные эксперименты',
-        'Интеллектуальная игра'
-      ]
-    },
-    '2024-07-15': {
-      title: 'День 14',
-      events: [
-        'Фотокросс',
-        'Подготовка выставки',
-        'Просмотр фильма'
-      ]
-    },
-    '2024-07-16': {
-      title: 'День 15',
-      events: [
-        'День искусств',
-        'Художественные мастерские',
-        'Выставка работ'
-      ]
-    },
-    '2024-07-17': {
-      title: 'День 16',
-      events: [
-        'Спортивные соревнования',
-        'Подготовка к закрытию',
-        'Вечер достижений'
-      ]
-    },
-    '2024-07-18': {
-      title: 'День 17',
-      events: [
-        'Защита проектов',
-        'Подведение итогов',
-        'Праздничный концерт'
-      ]
-    },
-    '2024-07-19': {
-      title: 'День 18',
-      events: [
-        'День памяти',
-        'Встреча с выпускниками',
-        'Вечер воспоминаний'
-      ]
-    },
-    '2024-07-20': {
-      title: 'День 19',
-      events: [
-        'Подготовка к закрытию',
-        'Репетиция финального концерта',
-        'Последний огонёк'
-      ]
-    },
-    '2024-07-21': {
-      title: 'День 20',
-      events: [
-        'Заключительный концерт',
-        'Награждение участников',
-        'Прощальный огонек'
-      ]
-    },
-    '2024-07-22': {
-      title: 'День 21',
-      events: [
-        'Закрытие Сбора',
-        'Общее фото',
-        'Отъезд участников'
-      ]
-    }
-  }
+  events: {}
 }
 
 // Добавляем массив с фотографиями после существующих констант
 const galleryImages = [
   {
     src: '/images/senior/18nctKRNIVg.jpg',
-    alt: 'Сбор - Общее фото',
-    width: 1920,
-    height: 1080
+    alt: '',
+    width: 2048,
+    height: 1365
   },
   {
     src: '/images/senior/3rONH790X0Q.jpg',
-    alt: 'Сбор - Вечерний огонёк',
-    width: 1920,
-    height: 1080
+    alt: '',
+    width: 2048,
+    height: 1365
   },
   {
     src: '/images/senior/GlAdsvgT-jw.jpg',
-    alt: 'Сбор - Творческие мастерские',
-    width: 1920,
-    height: 1080
+    alt: '',
+    width: 2048,
+    height: 1365
   },
   {
     src: '/images/senior/KQdBLv67oaU.jpg',
-    alt: 'Сбор - Спортивные мероприятия',
-    width: 1920,
-    height: 1080
+    alt: '',
+    width: 2048,
+    height: 1365
   },
   {
     src: '/images/senior/Om6LciaxUbA.jpg',
-    alt: 'Сбор - Командные игры',
-    width: 1920,
-    height: 1080
+    alt: '',
+    width: 2048,
+    height: 1365
   },
   {
     src: '/images/senior/SkcGdlrC2U8.jpg',
-    alt: 'Сбор - Закрытие',
-    width: 1920,
-    height: 1080
+    alt: '',
+    width: 2048,
+    height: 1365
   },
   {
     src: '/images/senior/TsecprwEfyE.jpg',
-    alt: 'Сбор - Творческие выступления',
-    width: 1920,
-    height: 1080
+    alt: '',
+    width: 2048,
+    height: 1365
   },
   {
     src: '/images/senior/Z6ptYdYrep4.jpg',
-    alt: 'Сбор - Работа в группах',
-    width: 1920,
-    height: 1080
+    alt: '',
+    width: 2048,
+    height: 1365
   },
   {
     src: '/images/senior/cNsaqKY7s4s.jpg',
-    alt: 'Сбор - Общие мероприятия',
-    width: 1920,
-    height: 1080
+    alt: '',
+    width: 2048,
+    height: 1365
   },
   {
     src: '/images/senior/ddEMlhHgnpI.jpg',
-    alt: 'Сбор - Командные соревнования',
-    width: 1920,
-    height: 1080
+    alt: '',
+    width: 2048,
+    height: 1365
   },
   {
     src: '/images/senior/ifB8z7q3fi4.jpg',
-    alt: 'Сбор - Вечерние активности',
-    width: 1920,
-    height: 1080
+    alt: '',
+    width: 2048,
+    height: 1365
   },
   {
     src: '/images/senior/k4MeItVIDZ4.jpg',
-    alt: 'Сбор - Мастер-классы',
-    width: 1920,
-    height: 1080
+    alt: '',
+    width: 2048,
+    height: 1365
   },
   {
     src: '/images/senior/mbaY5qbP2BI.jpg',
-    alt: 'Сбор - Творческие занятия',
-    width: 1920,
-    height: 1080
+    alt: '',
+    width: 2048,
+    height: 1365
   },
   {
     src: '/images/senior/qJVRq_8LiPU.jpg',
-    alt: 'Сбор - Спортивные игры',
-    width: 1920,
-    height: 1080
+    alt: '',
+    width: 2048,
+    height: 1365
   },
   {
     src: '/images/senior/s99lbEbqCX4 (1).jpg',
-    alt: 'Сбор - Общее фото участников',
-    width: 1920,
-    height: 1080
+    alt: '',
+    width: 2048,
+    height: 1365
   },
   {
     src: '/images/senior/uIFzt8Bz-6U.jpg',
-    alt: 'Сбор - Вечерние мероприятия',
-    width: 1920,
-    height: 1080
+    alt: '',
+    width: 2048,
+    height: 1365
   },
   {
     src: '/images/senior/yVkhz0nQuio.jpg',
-    alt: 'Сбор - Финальное мероприятие',
-    width: 1920,
-    height: 1080
+    alt: '',
+    width: 2048,
+    height: 1365
   }
 ]
 
@@ -419,54 +250,46 @@ function Calendar() {
                 </div>
 
                 {/* Всплывающая подсказка */}
-                {(hoveredDate === date && hasEvents) && (
+                {hoveredDate === date && (
                   <motion.div
                     initial={{ opacity: 0, y: 10, scale: 0.95 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: 10, scale: 0.95 }}
                     className="absolute z-50 bottom-full left-1/2 -translate-x-1/2 mb-4 w-72"
                   >
-                    <div className="bg-[rgb(15,23,42)] border border-primary/50 rounded-2xl p-6 shadow-xl">
-                      <div className="flex items-center justify-between mb-4">
-                        <h4 className="text-lg font-semibold">
-                          {campSchedule.events[date].title}
-                        </h4>
-                        <span className="text-sm text-white/40">
-                          {new Date(date).toLocaleDateString('ru-RU', { 
-                            day: 'numeric',
-                            month: 'long'
-                          })}
-                        </span>
+                    {hasEvents ? (
+                      <div className="bg-[rgb(15,23,42)] border border-primary/50 rounded-2xl p-6 shadow-xl">
+                        <div className="flex items-center justify-between mb-4">
+                          <h4 className="text-lg font-semibold">
+                            {campSchedule.events[date].title}
+                          </h4>
+                          <span className="text-sm text-white/40">
+                            {new Date(date).toLocaleDateString('ru-RU', { 
+                              day: 'numeric',
+                              month: 'long'
+                            })}
+                          </span>
+                        </div>
+                        <ul className="space-y-2">
+                          {campSchedule.events[date].events.map((event, i) => (
+                            <motion.li
+                              key={i}
+                              initial={{ opacity: 0, x: -10 }}
+                              animate={{ opacity: 1, x: 0 }}
+                              transition={{ delay: i * 0.1 }}
+                              className="flex items-center text-sm text-white/70"
+                            >
+                              <span className="w-1.5 h-1.5 rounded-full bg-primary mr-3" />
+                              {event}
+                            </motion.li>
+                          ))}
+                        </ul>
                       </div>
-                      <ul className="space-y-2">
-                        {campSchedule.events[date].events.map((event, i) => (
-                          <motion.li
-                            key={i}
-                            initial={{ opacity: 0, x: -10 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ delay: i * 0.1 }}
-                            className="flex items-center text-sm text-white/70"
-                          >
-                            <span className="w-1.5 h-1.5 rounded-full bg-primary mr-3" />
-                            {event}
-                          </motion.li>
-                        ))}
-                      </ul>
-                    </div>
-                  </motion.div>
-                )}
-
-                {/* Сообщение 'soon' при клике */}
-                {clickedDate === date && !hasEvents && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                    className="absolute z-50 bottom-full left-1/2 -translate-x-1/2 mb-4 w-32"
-                  >
-                    <div className="bg-[rgb(15,23,42)] border border-primary/50 rounded-2xl p-4 shadow-xl text-center">
-                      <span className="text-white text-sm">soon</span>
-                    </div>
+                    ) : (
+                      <div className="bg-[rgb(15,23,42)] border border-primary/50 rounded-2xl p-4 shadow-xl text-center">
+                        <span className="text-white text-sm">coming soon</span>
+                      </div>
+                    )}
                   </motion.div>
                 )}
               </motion.div>
@@ -551,7 +374,6 @@ export default function SeniorPage() {
           </h2>
           <Gallery 
             images={galleryImages}
-            title="Моменты Сбора старшеклассников"
           />
         </section>
       </div>

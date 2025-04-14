@@ -19,7 +19,7 @@ interface GalleryProps {
   itemsPerPage?: number
 }
 
-export function Gallery({ images, title, itemsPerPage = 6 }: GalleryProps) {
+export function Gallery({ images, title, itemsPerPage = 100 }: GalleryProps) {
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null)
   const [currentPage, setCurrentPage] = useState(1)
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
@@ -95,6 +95,7 @@ export function Gallery({ images, title, itemsPerPage = 6 }: GalleryProps) {
               fill
               className="object-cover object-center transition-transform duration-300 hover:scale-110 rounded-lg shadow-lg"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              quality={100}
             />
             <div className="absolute inset-0 bg-black/60 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
               <p className="text-white text-sm">{image.alt}</p>
@@ -159,8 +160,9 @@ export function Gallery({ images, title, itemsPerPage = 6 }: GalleryProps) {
                 width={selectedImage.width}
                 height={selectedImage.height}
                 className="max-h-[90vh] w-auto rounded-lg"
+                quality={100}
+                priority
               />
-              <p className="text-white mt-4 text-center">{selectedImage.alt}</p>
             </motion.div>
           </motion.div>
         )}

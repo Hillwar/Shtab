@@ -32,7 +32,7 @@ export const NAVIGATION = {
     contacts: {
       address: 'г. Архангельск, Набережная Северной Двины д73, 2 этаж, 22 кабинет',
       phone: '+7 (8182) 28-58-69',
-      email: ''
+      email: 'shtab@inbox.ru'
     },
     socialLinks: [
       { platform: 'VK', url: 'https://vk.com/shtab_29', icon: 'VK' }

@@ -11,37 +11,85 @@ import { FORMS_CONFIG } from '../lib/config'
 const galleryImages = [
   {
     src: '/images/winter/0_rxP_2GwtI.jpg',
-    alt: 'Зимовка - Общее фото',
+    alt: '',
     width: 1920,
     height: 1080
   },
   {
     src: '/images/winter/0ZGxt98XV94.jpg',
-    alt: 'Зимовка - Зимние активности',
+    alt: '',
     width: 1920,
     height: 1080
   },
   {
     src: '/images/winter/AMC2AOhao5E.jpg',
-    alt: 'Зимовка - Командные игры',
+    alt: '',
     width: 1920,
     height: 1080
   },
   {
     src: '/images/winter/BntYYoTNaEI.jpg',
-    alt: 'Зимовка - Творческие мастерские',
+    alt: '',
     width: 1920,
     height: 1080
   },
   {
     src: '/images/winter/PcRLr_FjBn0.jpg',
-    alt: 'Зимовка - Вечерние мероприятия',
+    alt: '',
     width: 1920,
     height: 1080
   },
   {
     src: '/images/winter/WP8apxrW2g4.jpg',
-    alt: 'Зимовка - Спортивные соревнования',
+    alt: '',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/winter/b6VWW-3-P04.jpg',
+    alt: '',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/winter/fOyu0cB23Wg.jpg',
+    alt: '',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/winter/jkJbtWgfLk4.jpg',
+    alt: '',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/winter/lYtRP13l-cI.jpg',
+    alt: '',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/winter/liO0GgoqlrQ.jpg',
+    alt: '',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/winter/tZx70BSoETA.jpg',
+    alt: '',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/winter/vAv7lnCfo5M.jpg',
+    alt: '',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/winter/LhQWPhbRwnQ.jpg',
+    alt: '',
     width: 1920,
     height: 1080
   }
@@ -133,16 +181,6 @@ export default function WinterPage() {
                 незабываемые впечатления и помогает участникам раскрыть свой потенциал.
               </p>
             </div>
-
-            <div className="glass-card p-6">
-              <h3 className="text-xl font-bold mb-4">Что взять с собой</h3>
-              <ul className="space-y-2 text-white/80">
-                <li>• Теплую одежду</li>
-                <li>• Спортивную форму</li>
-                <li>• Хорошее настроение</li>
-                <li>• Желание учиться новому</li>
-              </ul>
-            </div>
           </motion.div>
         </div>
       </div>
@@ -154,7 +192,6 @@ export default function WinterPage() {
         </h2>
         <Gallery 
           images={galleryImages}
-          title="Моменты зимовки"
         />
       </section>
     </Layout>

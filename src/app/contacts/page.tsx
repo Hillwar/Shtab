@@ -9,12 +9,12 @@ import { MapPin, Phone, Mail, Clock } from 'lucide-react'
 const socialLinks = [
   {
     name: 'VK',
-    url: 'https://vk.com/agsh',
+    url: 'https://vk.com/shtab_29',
     description: 'Следите за нашими новостями и мероприятиями'
   },
   {
     name: 'Telegram',
-    url: 'https://t.me/agsh',
+    url: 'https://t.me/happysummer66',
     description: 'Присоединяйтесь к нашему каналу'
   }
 ]
@@ -55,7 +55,7 @@ export default function ContactsPage() {
               <Mail className="w-8 h-8 text-primary" />
               <h3 className="text-xl font-semibold">Email</h3>
               <p className="text-white/70">
-                
+                shtab@inbox.ru
               </p>
             </div>
           </Card>
@@ -84,7 +84,7 @@ export default function ContactsPage() {
         </div>
 
         {/* Social media section */}
-        <section className="mb-24">
+        <section className="mt-16">
           <h2 className="text-3xl font-bold text-center mb-12">
             Мы в социальных сетях
           </h2>
@@ -114,71 +114,6 @@ export default function ContactsPage() {
               </motion.div>
             ))}
           </div>
-        </section>
-
-        {/* Contact form */}
-        <section>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="max-w-3xl mx-auto"
-          >
-            <Card className="p-8">
-              <h2 className="text-3xl font-bold text-center mb-8">
-                Напишите нам
-              </h2>
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-white/70 mb-2">
-                      Имя
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white focus:outline-none focus:border-blue-500"
-                      placeholder="Ваше имя"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-white/70 mb-2">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white focus:outline-none focus:border-blue-500"
-                      placeholder="your@email.com"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-white/70 mb-2">
-                    Тема
-                  </label>
-                  <input
-                    type="text"
-                    className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white focus:outline-none focus:border-blue-500"
-                    placeholder="Тема сообщения"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-white/70 mb-2">
-                    Сообщение
-                  </label>
-                  <textarea
-                    rows={6}
-                    className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white focus:outline-none focus:border-blue-500"
-                    placeholder="Ваше сообщение..."
-                  />
-                </div>
-                <div className="text-center">
-                  <button className="px-8 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-full font-medium transition-colors">
-                    Отправить сообщение
-                  </button>
-                </div>
-              </form>
-            </Card>
-          </motion.div>
         </section>
       </div>
     </Layout>

@@ -56,7 +56,7 @@ export const MAIN_PAGE = {
     },
     {
       title: 'Зимовка',
-      description: 'Зимний лагерь с насыщенной программой',
+      description: 'Зимний лагерь для учебы актива штаба',
       icon: '❄️',
       link: '/winter',
       order: 2
@@ -70,7 +70,7 @@ export const MAIN_PAGE = {
     },
     {
       title: 'Соловки',
-      description: 'Экспедиция на Соловецкие острова',
+      description: 'Волонтерство на Соловецких островах',
       icon: '⛵',
       link: '/solovki',
       order: 4

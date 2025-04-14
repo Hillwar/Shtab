@@ -30,71 +30,89 @@ const expeditionHighlights = [
   }
 ]
 
-const expeditionDetails = [
-  {
-    title: 'Проживание',
-    items: [
-      'Размещение в гостинице',
-      'Трехразовое питание',
-      'Комфортные условия проживания',
-      'Учебные помещения для занятий'
-    ]
-  },
-  {
-    title: 'Образование',
-    items: [
-      'Лекции по истории Соловков',
-      'Практические занятия',
-      'Экологические исследования',
-      'Мастер-классы по краеведению'
-    ]
-  },
-  {
-    title: 'Экскурсии',
-    items: [
-      'Соловецкий монастырь',
-      'Ботанический сад',
-      'Лабиринты и менгиры',
-      'Морские прогулки вокруг островов'
-    ]
-  }
-]
-
 // Добавляем массив с фотографиями после существующих констант
 const galleryImages = [
   {
-    src: '/images/solovki/1.jpg',
-    alt: 'Соловки - Общее фото',
-    width: 1920,
-    height: 1080
-  },
-  {
     src: '/images/solovki/6PuDGwo90Is.jpg',
-    alt: 'Соловки - Монастырь',
+    alt: '',
     width: 1920,
     height: 1080
   },
   {
     src: '/images/solovki/B499PNG8BXc.jpg',
-    alt: 'Соловки - Природа',
+    alt: '',
     width: 1920,
     height: 1080
   },
   {
     src: '/images/solovki/IMUjT-dGTtI.jpg',
-    alt: 'Соловки - Морская прогулка',
+    alt: '',
     width: 1920,
     height: 1080
   },
   {
     src: '/images/solovki/JaTd-DymHZU.jpg',
-    alt: 'Соловки - Исследования',
+    alt: '',
     width: 1920,
     height: 1080
   },
   {
     src: '/images/solovki/txaKymp_4vM.jpg',
-    alt: 'Соловки - Закат',
+    alt: '',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/solovki/JnQ2wdl3up8.jpg',
+    alt: '',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/solovki/N9BSCSGdId8.jpg',
+    alt: '',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/solovki/OTd1zZlfZ0g.jpg',
+    alt: '',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/solovki/TVvMrzy-bTA.jpg',
+    alt: '',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/solovki/VPQ9Rnqm-jE.jpg',
+    alt: '',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/solovki/a-kUsJbHckY.jpg',
+    alt: '',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/solovki/hGqaSBj8XiU.jpg',
+    alt: '',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/solovki/kCWncOa7MiU.jpg',
+    alt: '',
+    width: 1920,
+    height: 1080
+  },
+  {
+    src: '/images/solovki/qUIL4Golxeo.jpg',
+    alt: '',
     width: 1920,
     height: 1080
   }
@@ -118,9 +136,6 @@ export default function SolovkiPage() {
               Участники ежедневно трудятся на благо архипелага, знакомятся с историческими памятниками 
               и природными объектами.
             </p>
-            <div className="glass inline-block px-4 py-2 rounded-full text-sm text-white/70">
-              Лето 2024
-            </div>
           </Card>
 
           <Card className="p-8">
@@ -151,11 +166,8 @@ export default function SolovkiPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
               >
-                <span className="inline-block px-4 py-2 rounded-full bg-blue-500/20 text-blue-200 backdrop-blur-sm mb-4">
-                  Лето 2024
-                </span>
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                  Трудовой лагерь
+                  Соловки
                 </h2>
                 <p className="text-lg md:text-xl text-white/80">
                   Уникальная возможность изучить историю, культуру и природу Соловецкого архипелага и внести свой вклад
@@ -196,37 +208,6 @@ export default function SolovkiPage() {
           </div>
         </section>
 
-        {/* Details section */}
-        <section className="mb-24">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Организация экспедиции
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {expeditionDetails.map((detail, index) => (
-              <motion.div
-                key={detail.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <Card className="h-full">
-                  <h3 className="text-xl font-semibold text-white mb-4">
-                    {detail.title}
-                  </h3>
-                  <ul className="space-y-3">
-                    {detail.items.map((item) => (
-                      <li key={item} className="flex items-center text-white/70">
-                        <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mr-3" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </section>
-
         {/* Map section */}
         <section className="mb-24">
           <Card>
@@ -252,7 +233,6 @@ export default function SolovkiPage() {
           </h2>
           <Gallery 
             images={galleryImages}
-            title="Экспедиция на Соловки"
           />
         </section>
       </div>
