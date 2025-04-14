@@ -158,7 +158,6 @@ const galleryImages = [
 
 function Calendar() {
   const [hoveredDate, setHoveredDate] = useState<string | null>(null)
-  const [clickedDate, setClickedDate] = useState<string | null>(null)
   
   // Создаем массив дней июля
   const days = Array.from({ length: 31 }, (_, i) => {
@@ -220,7 +219,6 @@ function Calendar() {
                 className="relative"
                 onMouseEnter={() => setHoveredDate(date)}
                 onMouseLeave={() => setHoveredDate(null)}
-                onClick={() => setClickedDate(date)}
               >
                 <div
                   className={`
