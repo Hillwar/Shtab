@@ -285,7 +285,7 @@ function Calendar() {
                       </div>
                     ) : (
                       <div className="bg-[rgb(15,23,42)] border border-primary/50 rounded-2xl p-4 shadow-xl text-center">
-                        <span className="text-white text-sm">coming soon</span>
+                        <span className="text-white text-sm">Подавай заявку, чтобы повлиять на программу лагеря!</span>
                       </div>
                     )}
                   </motion.div>
