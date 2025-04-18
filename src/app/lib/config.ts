@@ -7,7 +7,7 @@
 
 // Настройки навигации - видимость вкладок
 export const NAVIGATION_CONFIG = {
-  showHistory: false,
+  showHistory: true,
   showEducation: true,  // Учеба актива
   showSenior: true,     // Сбор
   showWinter: true,     // Зимовка
