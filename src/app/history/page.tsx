@@ -153,61 +153,7 @@ export default function HistoryPage() {
       />
 
       <div className="container mx-auto px-4 py-12">
-        {/* Описание методики */}
-        <div className="max-w-4xl mx-auto mb-16">
-          <div className="glass-card p-8">
-            <h2 className="text-2xl font-bold mb-6 text-gradient">Методика работы</h2>
-            <p className="text-white/80 mb-4">
-              АГШШ работает по методике коллективного творческого воспитания (коммунарской методике), разработанной академиком И.П. Ивановым. 
-              Основные принципы методики:
-            </p>
-            <ul className="list-disc list-inside text-white/80 mb-6 space-y-2">
-              <li>Коллективная организация деятельности</li>
-              <li>Коллективное творчество</li>
-              <li>Коллективное целеполагание</li>
-              <li>Ситуации-образцы</li>
-              <li>Эмоциональное насыщение жизни коллектива</li>
-              <li>Общественная направленность деятельности</li>
-            </ul>
-            <p className="text-white/80">
-              Эта методика позволяет эффективно развивать лидерские качества, творческие способности и социальную активность участников.
-            </p>
-          </div>
-        </div>
-
-        {/* Основные направления */}
-        <div className="max-w-4xl mx-auto mb-16">
-          <div className="glass-card p-8">
-            <h2 className="text-2xl font-bold mb-6 text-gradient">Основные направления деятельности</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-xl font-semibold mb-3">Сбор старшеклассников</h3>
-                <p className="text-white/80 mb-6">
-                  Традиционное летнее мероприятие на Копачёвской поляне, включающее образовательную программу, творческие мастерские и коллективные дела.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-3">Зимовка</h3>
-                <p className="text-white/80 mb-6">
-                  Зимний лагерь с насыщенной программой, направленной на развитие лидерских качеств и командной работы.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-3">Учеба актива</h3>
-                <p className="text-white/80 mb-6">
-                  Программа подготовки будущих организаторов и лидеров, включающая тренинги, мастер-классы и практическую работу.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-3">Соловецкая экспедиция</h3>
-                <p className="text-white/80 mb-6">
-                  Исследовательская экспедиция на Соловецкие острова, сочетающая изучение истории, природы и культуры архипелага.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
+    
         {/* Таймлайн */}
         <div className="relative max-w-4xl mx-auto">
           {/* Линия времени */}
