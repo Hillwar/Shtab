@@ -9,7 +9,7 @@ export default function ActivityPage() {
     <Layout>
       <PageHeader
         title="Учеба актива"
-        description="Программы развития лидерских качеств и навыков организаторской работы"
+        description="Программы развития организаторских качеств и навыков организаторской работы"
       />
 
       <div className="container mx-auto px-4 py-12">
@@ -25,7 +25,7 @@ export default function ActivityPage() {
               <h2 className="text-2xl font-bold mb-4 text-gradient">О программе</h2>
               <p className="text-white/80">
                 Учеба актива - это комплексная программа, направленная на развитие
-                лидерских качеств, организаторских способностей и навыков работы в команде.
+                организаторских качеств, организаторских способностей и навыков работы в команде.
                 Участники получают практические знания и опыт, необходимые для успешной
                 общественной деятельности.
               </p>
@@ -86,7 +86,7 @@ export default function ActivityPage() {
             <div className="glass-card p-6">
               <h2 className="text-2xl font-bold mb-4 text-gradient">Результаты обучения</h2>
               <ul className="space-y-3 text-white/80">
-                <li>• Развитие лидерских качеств</li>
+                <li>• Развитие организаторских качеств</li>
                 <li>• Навыки организации мероприятий</li>
                 <li>• Опыт командной работы</li>
                 <li>• Практика публичных выступлений</li>

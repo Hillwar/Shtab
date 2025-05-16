@@ -65,7 +65,7 @@ export default function ContactsPage() {
               <Clock className="w-8 h-8 text-primary" />
               <h3 className="text-xl font-semibold">Время работы</h3>
               <p className="text-white/70">
-                Пн-Пт: 10:00 - 18:00<br />
+                Пн-Пт: 16:00 - 19:00<br />
                 Сб-Вс: выходной
               </p>
             </div>
