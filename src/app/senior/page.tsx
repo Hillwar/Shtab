@@ -305,7 +305,7 @@ export default function SeniorPage() {
       <div className="container mx-auto px-4">
         <PageHeader
           title="Сбор старшеклассников"
-          description="Легендарный летний лагерь АГШШ на Копачёвской поляне"
+          description="Палаточный летний лагерь АГШШ на Копачёвской поляне"
         />
 
         {/* Button section */}
@@ -373,6 +373,40 @@ export default function SeniorPage() {
           <Gallery 
             images={galleryImages}
           />
+        </section>
+
+        {/* Documents section */}
+        <section className="my-24">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Документы
+          </h2>
+          <div className="max-w-3xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="glass p-8 rounded-3xl flex items-center justify-between"
+            >
+              <div className="flex items-center">
+                <span className="text-4xl mr-6">📄</span>
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-1">
+                    ПРОГРАММА ВОСПИТАТЕЛЬНОЙ РАБОТЫ
+                  </h3>
+                  <p className="text-white/70">
+                    Официальная программа воспитательной работы для Сбора старшеклассников
+                  </p>
+                </div>
+              </div>
+              <a 
+                href="/documents/Program for High School Students.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="button-secondary whitespace-nowrap flex-shrink-0"
+              >
+                Скачать
+              </a>
+            </motion.div>
+          </div>
         </section>
       </div>
     </Layout>
